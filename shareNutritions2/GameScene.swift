@@ -182,7 +182,7 @@ let playerContact : UInt32 = 0x1 << -2
         brain.physicsBody?.linearDamping = 1.0
         brain.physicsBody?.contactTestBitMask = playerContact
         brain.name = "Brain"
-        //player2moved()
+        brainSad()
         addChild(brain)
     
     //add lungs
@@ -195,7 +195,7 @@ let playerContact : UInt32 = 0x1 << -2
         lungs.physicsBody?.linearDamping = 1.0
         // lungs.physicsBody?.contactTestBitMask = playerContact
         lungs.name = "Lungs"
-        //player2moved()
+        lungsSad()
         addChild(lungs)
         
     
@@ -209,7 +209,7 @@ let playerContact : UInt32 = 0x1 << -2
         muscle.physicsBody?.linearDamping = 1.0
         // muscle.physicsBody?.contactTestBitMask = playerContact
         muscle.name = "Muscle"
-        //player2moved()
+        muscleSad()
         addChild(muscle)
     
     //add nutritions
@@ -270,7 +270,7 @@ let playerContact : UInt32 = 0x1 << -2
         }
         }else if   touchLocation.x >= 120 && touchLocation.x < 200 && touchLocation.y >= (muscle.position.y) {
         lynn.physicsBody?.velocity = (CGVector(dx: (muscle.position.x)-(lynn.position.x), dy:0 ))
-            player1moved()
+    
             DispatchQueue.main.async {
                 AudioServicesPlayAlertSound(SystemSoundID(1324) )
             
@@ -278,18 +278,18 @@ let playerContact : UInt32 = 0x1 << -2
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
         self.takeNutritions()
         self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.muscle.position.y)-(self.lynn.position.y) ))
-        self.player1moved()
+        
             
         })
         
         } else if  touchLocation.x <= 50 && touchLocation.y <= 50 {
         
         lynn.physicsBody?.velocity = (CGVector(dx: (nutritions.position.x)-(lynn.position.x), dy:0 ))
-            player1moved()
+          
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
         self.takeNutritions()
         self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.nutritions.position.y)-(self.lynn.position.y) ))
-        self.player1moved()
+        
         AudioServicesPlayAlertSound(SystemSoundID(1355) )
         })
         
@@ -378,18 +378,40 @@ let animateAction = SKAction.animate(with:takeTexture, timePerFrame: 0.5)
 lynn.run(animateAction)
 }
 
-    func player1moved(){
-        let textureAtlas = SKTextureAtlas(named: "Lynn")
-        let frame0 = textureAtlas.textureNamed("Lynn Idle 1")
-        let frame1 = textureAtlas.textureNamed("Lynn move kanan 1")
-        let frame2 = textureAtlas.textureNamed("Lynn move kanan 2")
-        let frame3 = textureAtlas.textureNamed("Lynn Idle 2")
-        let player1Texture = [frame0,frame1,frame2,frame3,frame0]
+    func lynnIdle(){
+        let textureAtlas =  SKTextureAtlas(named: "Lynn")
+        let Lynn = [textureAtlas.textureNamed("Lynn Idle 1"), textureAtlas.textureNamed("Lynn Idle 2"), textureAtlas.textureNamed("Lynn Idle 1"), textureAtlas.textureNamed("Lynn Idle 2"), textureAtlas.textureNamed("Lynn Idle 1"), textureAtlas.textureNamed("Lynn Idle 2"), textureAtlas.textureNamed("Lynn Idle 1")]
         
-        let animateAction = SKAction.animate(with:player1Texture, timePerFrame: 0.5)
+        let lynnIdleTexture = Lynn
+        let animateAction = SKAction.animate(with:lynnIdleTexture, timePerFrame: 0.5)
         lynn.run(animateAction)
+        }
+    func lynnLeft(){
+        let textureAtlas =  SKTextureAtlas(named: "Lynn")
+        let Lynn = [textureAtlas.textureNamed("Lynn move kiri 1"), textureAtlas.textureNamed("Lynn move kiri 2"), textureAtlas.textureNamed("Lynn move kiri 1"), textureAtlas.textureNamed("Lynn move kiri 2"), textureAtlas.textureNamed("Lynn move kiri 1"), textureAtlas.textureNamed("Lynn move kiri 2"), textureAtlas.textureNamed("Lynn move kiri 1")]
         
-    }
+        let lynnLeftTexture = Lynn
+        let animateAction = SKAction.animate(with:lynnLeftTexture, timePerFrame: 0.5)
+        lynn.run(animateAction)
+        }
+    
+    func lynnRight(){
+        let textureAtlas =  SKTextureAtlas(named: "Lynn")
+        let Lynn = [textureAtlas.textureNamed("Lynn move kanan 1"), textureAtlas.textureNamed("Lynn move kanan 2"), textureAtlas.textureNamed("Lynn move kanan 1"), textureAtlas.textureNamed("Lynn move kanan 2"), textureAtlas.textureNamed("Lynn move kanan 1"), textureAtlas.textureNamed("Lynn move kanan 2"), textureAtlas.textureNamed("Lynn move kanan 1")]
+        
+        let lynnRightTexture = Lynn
+        let animateAction = SKAction.animate(with:lynnRightTexture, timePerFrame: 0.5)
+        lynn.run(animateAction)
+        }
+    
+    func lynnForward(){
+        let textureAtlas =  SKTextureAtlas(named: "Lynn")
+        let Lynn = [textureAtlas.textureNamed("Lynn move depan 1"), textureAtlas.textureNamed("Lynn move depan 2"), textureAtlas.textureNamed("Lynn move depan 1"), textureAtlas.textureNamed("Lynn move depan 2"), textureAtlas.textureNamed("Lynn move depan 1"), textureAtlas.textureNamed("Lynn move depan 2"), textureAtlas.textureNamed("Lynn move depan 1")]
+        
+        let lynnForwardTexture = Lynn
+        let animateAction = SKAction.animate(with:lynnForwardTexture, timePerFrame: 0.5)
+        lynn.run(animateAction)
+        }
     func player2moved(){
         let textureAtlas = SKTextureAtlas(named: "Kidney")
         let frame0 = textureAtlas.textureNamed("Ginjal sedih 1")
@@ -436,6 +458,60 @@ lynn.run(animateAction)
         let animateAction = SKAction.animate(with:player2Texture, timePerFrame: 0.5)
         heart.run(animateAction)
     }
+    
+    func brainHappy(){
+        let textureAtlas =  SKTextureAtlas(named: "Brain")
+        let Brain = [textureAtlas.textureNamed("Brain Happy 1"), textureAtlas.textureNamed("Brain Happy 2"), textureAtlas.textureNamed("Brain Happy 1"), textureAtlas.textureNamed("Brain Happy 2"), textureAtlas.textureNamed("Brain Happy 1"), textureAtlas.textureNamed("Brain Happy 2"), textureAtlas.textureNamed("Brain Happy 1")]
+        
+        let brainHappyTexture = Brain
+        let animateAction = SKAction.animate(with:brainHappyTexture, timePerFrame: 0.5)
+        brain.run(animateAction)
+        }
+    
+    func brainSad(){
+        let textureAtlas =  SKTextureAtlas(named: "Brain")
+        let Brain = [textureAtlas.textureNamed("Otak sedih 1"), textureAtlas.textureNamed("Otak sedih 2"), textureAtlas.textureNamed("Otak sedih 1"), textureAtlas.textureNamed("Otak sedih 2"), textureAtlas.textureNamed("Otak sedih 1"), textureAtlas.textureNamed("Otak sedih 2"), textureAtlas.textureNamed("Otak sedih 1")]
+        
+        let brainSedihTexture = Brain
+        let animateAction = SKAction.animate(with:brainSedihTexture, timePerFrame: 0.5)
+        brain.run(animateAction)
+        }
+    
+    func muscleHappy(){
+        let textureAtlas =  SKTextureAtlas(named: "Muscle")
+        let Muscle = [textureAtlas.textureNamed("Otot Happy 1"), textureAtlas.textureNamed("Otot Happy 2"), textureAtlas.textureNamed("Otot Happy 1"), textureAtlas.textureNamed("Otot Happy 2"), textureAtlas.textureNamed("Otot Happy 1"), textureAtlas.textureNamed("Otot Happy 2"), textureAtlas.textureNamed("Otot Happy 1")]
+        
+        let muscleHappyTexture = Muscle
+        let animateAction = SKAction.animate(with:muscleHappyTexture, timePerFrame: 0.5)
+        muscle.run(animateAction)
+        }
+    
+    func muscleSad(){
+        let textureAtlas =  SKTextureAtlas(named: "Muscle")
+        let Muscle = [textureAtlas.textureNamed("Otot sedih 1"), textureAtlas.textureNamed("Otot sedih 2"), textureAtlas.textureNamed("Otot sedih 1"), textureAtlas.textureNamed("Otot sedih 2"), textureAtlas.textureNamed("Otot sedih 1"), textureAtlas.textureNamed("Otot sedih 2"), textureAtlas.textureNamed("Otot sedih 1")]
+        
+        let muscleSadTexture = Muscle
+        let animateAction = SKAction.animate(with:muscleSadTexture, timePerFrame: 0.5)
+        brain.run(animateAction)
+        }
+    
+    func lungsHappy(){
+        let textureAtlas =  SKTextureAtlas(named: "Lungs")
+        let Lungs = [textureAtlas.textureNamed("Paru happy 1"), textureAtlas.textureNamed("Paru happy 2"), textureAtlas.textureNamed("Paru happy 1"), textureAtlas.textureNamed("Paru happy 2"), textureAtlas.textureNamed("Paru happy 1"), textureAtlas.textureNamed("Paru happy 2"), textureAtlas.textureNamed("Paru happy 1")]
+        
+        let lungsHappyTexture = Lungs
+        let animateAction = SKAction.animate(with:lungsHappyTexture, timePerFrame: 0.5)
+        lungs.run(animateAction)
+        }
+    
+    func lungsSad(){
+        let textureAtlas =  SKTextureAtlas(named: "Lungs")
+        let Lungs = [textureAtlas.textureNamed("Paru sedih 1"), textureAtlas.textureNamed("Paru sedih 2"), textureAtlas.textureNamed("Paru sedih 1"), textureAtlas.textureNamed("Paru sedih 2"), textureAtlas.textureNamed("Paru sedih 1"), textureAtlas.textureNamed("Paru sedih 2"), textureAtlas.textureNamed("Paru sedih 1")]
+        
+        let lungsSadTexture = Lungs
+        let animateAction = SKAction.animate(with:lungsSadTexture, timePerFrame: 0.5)
+        lungs.run(animateAction)
+        }
 //    override func update(_ currentTime: TimeInterval) {
 //        let reveal = SKTransition.flipHorizontal(withDuration: 1.0)
 //        var winner = String()
