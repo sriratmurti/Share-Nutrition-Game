@@ -100,7 +100,7 @@ import AudioToolbox
 class GameScene: SKScene {
  
     //Logic game will be written in GameScene
-    let background = SKSpriteNode (imageNamed: "background game 2.0 a")
+    let background = SKSpriteNode (imageNamed: "background nutrition")
     let lynn = SKSpriteNode(imageNamed: "Lynn Idle 1")
     let kidney = SKSpriteNode(imageNamed: "Ginjal sedih 1")
     let heart = SKSpriteNode (imageNamed: "Jantung sedih 1")
@@ -121,6 +121,7 @@ let playerContact : UInt32 = 0x1 << -2
     override init(size: CGSize) {
         super.init(size: size)
         
+        //self.view?.bounds.size = background.size
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = .zero
         physicsBody?.velocity = (CGVector(dx: 1.0, dy: 0.5))
@@ -129,9 +130,13 @@ let playerContact : UInt32 = 0x1 << -2
    
         
         background.subdivisionLevels = .min
-        background.size = CGSize(width: size.width, height: size.height)
+        background.size = CGSize(width: frame.maxX, height: frame.maxY)
         background.position = CGPoint(x: size.width/2, y: size.height/2)
+        background.zPosition = -1
+        //background.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+    
         addChild(background)
+        
     
     
   //      add pLynn
@@ -148,8 +153,8 @@ let playerContact : UInt32 = 0x1 << -2
         
         //add Kidney
         kidney.zPosition = 1
-        kidney.size = CGSize (width: 70, height: 70)
-        kidney.position = CGPoint(x: (size.width/5)*4, y: size.height - 80)
+        kidney.size = CGSize (width: 65, height: 65)
+        kidney.position = CGPoint(x: ((size.width)/4) * 3.15, y: (size.height) - 110)
         //anchor point utk menunjukkan kordinat si nodenya
         kidney.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         //player2.physicsBody = SKPhysicsBody(circleOfRadius: player2.size.width/3)
@@ -164,7 +169,7 @@ let playerContact : UInt32 = 0x1 << -2
         //add heart
         heart.zPosition = 1
         heart.size = CGSize(width: 70, height: 70)
-        heart.position = CGPoint(x: 0, y: size.height-80)
+        heart.position = CGPoint(x: ((size.width) / 8) * 0.7, y: (size.height) - 127)
         heart.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         //heart.physicsBody = SKPhysicsBody(circleOfRadius: heart.size.height/3)
         heart.physicsBody?.isDynamic = true
@@ -176,8 +181,8 @@ let playerContact : UInt32 = 0x1 << -2
     
         //add brain
         brain.zPosition = 1
-        brain.size = CGSize (width: 70, height: 70)
-        brain.position = CGPoint(x: (size.width/5)*3, y: size.height - 80)
+        brain.size = CGSize (width: 60, height: 60)
+        brain.position = CGPoint(x: (size.width) / 14, y: (size.height) - 255)
        //anchor point utk menunjukkan kordinat si nodenya
         brain.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         //brain.physicsBody = SKPhysicsBody(circleOfRadius: player2.size.width/3)
@@ -190,8 +195,8 @@ let playerContact : UInt32 = 0x1 << -2
     
     //add lungs
         lungs.zPosition = 1
-        lungs.size = CGSize (width: 70, height: 70)
-        lungs.position = CGPoint(x: (size.width/5)*2, y: size.height - 80)
+        lungs.size = CGSize (width: 60, height: 60)
+        lungs.position = CGPoint(x: (size.width / 2) * 0.87, y: size.height - 77)
         //anchor point utk menunjukkan kordinat si nodenya
         lungs.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         //lungs.physicsBody = SKPhysicsBody(circleOfRadius: player2.size.width/3)
@@ -206,7 +211,7 @@ let playerContact : UInt32 = 0x1 << -2
        //add muscle
         muscle.zPosition = 1
         muscle.size = CGSize (width: 70, height: 70)
-        muscle.position = CGPoint(x: size.width/5, y: size.height - 80)
+        muscle.position = CGPoint(x: ((size.width)/5) * 3.8 , y: (size.height) - 290)
         //anchor point utk menunjukkan kordinat si nodenya
         muscle.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         //muscle.physicsBody = SKPhysicsBody(circleOfRadius: player2.size.width/3)//
