@@ -101,7 +101,7 @@ class GameScene: SKScene {
  
     //Logic game will be written in GameScene
     let background = SKSpriteNode (imageNamed: "background nutrition")
-    let lynn = SKSpriteNode(imageNamed: "Lynn Idle 1")
+    let lynn = SKSpriteNode(imageNamed: "pink forward 1")
     let kidney = SKSpriteNode(imageNamed: "Ginjal sedih 1")
     let heart = SKSpriteNode (imageNamed: "Jantung sedih 1")
     let brain = SKSpriteNode (imageNamed: "Otak sedih 1")
@@ -244,16 +244,17 @@ let playerContact : UInt32 = 0x1 << -2
        
         
    
-    if touchLocation.x >= (kidney.position.x) && touchLocation.y >= (kidney.position.y) {
-        lynn.physicsBody?.velocity = (CGVector(dx: (kidney.position.x)-(lynn.position.x), dy: 0))
-    pinkLeft()
+        if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.x) + 70 && touchLocation.y >= (kidney.position.y) {
+        lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 3) - (lynn.position.y)))
+    pinkForward()
         DispatchQueue.main.async {
             AudioServicesPlayAlertSound(SystemSoundID(1151) )
         
         }
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
     self.player2moved2()
-        self.lynn.physicsBody?.velocity = CGVector(dx: 0 , dy: (self.kidney.position.y) - (self.lynn.position.y))
+        self.lynn.physicsBody?.velocity = CGVector(dx: (self.kidney.position.x)-(self.lynn.position.x) , dy: 0)
+        self.pinkRight()
     })
     
     lynn.isHidden = false
@@ -326,6 +327,7 @@ let playerContact : UInt32 = 0x1 << -2
 func pinkLeft(){
 let textureAtlas = SKTextureAtlas(named: "Pink")
 let pinky = [textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 2"), textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 2"), textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 2"), textureAtlas.textureNamed("pink left 1")]
+
 let pinkLeftTexture = pinky
 let animateAction = SKAction.animate(with:pinkLeftTexture, timePerFrame: 0.5)
 lynn.run(animateAction)
