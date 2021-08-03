@@ -264,73 +264,92 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.lynn.isHidden = false
         
     })
-    lynn.isHidden = false
-           
-    }else if touchLocation.x >= (heart.position.x) && touchLocation.x < (muscle.position.x) && touchLocation.y >= (heart.position.y) {
-        lynn.physicsBody?.velocity = (CGVector(dx: (heart.position.x) - (lynn.position.x), dy: 0))
-     pinkLeft()
     
+           
+}else if touchLocation.x > (heart.position.x) && touchLocation.x <= (heart.position.x) + 75 &&  touchLocation.y >= (heart.position.y) && touchLocation.y < (heart.position.y) + 75 {
+    
+    lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((brain.position.y) - (lynn.position.y)) + 55))
+     pinkForward()
         DispatchQueue.main.async {
             AudioServicesPlayAlertSound(SystemSoundID(1311) )
-        
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-        self.takeNutritions()
-        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.heart.position.y)-(self.lynn.position.y) ))
-        })
-    } else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (kidney.position.x) && touchLocation.y >= (brain.position.y) {
-        lynn.physicsBody?.velocity = (CGVector(dx: (brain.position.x) - (lynn.position.x), dy: 0))
-           pinkLeft()
-            DispatchQueue.main.async {
-                AudioServicesPlayAlertSound(SystemSoundID(1322) )
-            
-            }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-        self.takeNutritions()
-        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.brain.position.y)-(self.lynn.position.y) ))
-        })
-            
-    } else if  touchLocation.x >= (lungs.position.x) && touchLocation.x < (brain.position.x) && touchLocation.y >= (lungs.position.y) {
-        lynn.physicsBody?.velocity = (CGVector(dx: (lungs.position.x) - (lynn.position.x), dy: 0))
-           pinkLeft()
-        DispatchQueue.main.async {
-            AudioServicesPlayAlertSound(SystemSoundID(1309) )
-        
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-        self.takeNutritions()
-        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.lungs.position.y)-(self.lynn.position.y) ))
-        })
-    }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (lungs.position.x) && touchLocation.y >= (muscle.position.y) {
-        lynn.physicsBody?.velocity = (CGVector(dx: (muscle.position.x)-(lynn.position.x), dy:0 ))
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+        self.lynn.physicsBody?.velocity = (CGVector(dx: ((self.heart.position.x) - (self.lynn.position.x)) + 130, dy:0))
+        self.pinkLeft()
+    })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+        self.lynn.physicsBody?.velocity = (CGVector(dx: 0, dy:((self.heart.position.y) - (self.lynn.position.y)) + 40 ))
+        self.pinkForward()
     
-            DispatchQueue.main.async {
-                AudioServicesPlayAlertSound(SystemSoundID(1324) )
-            
-            }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
-        self.takeNutritions()
-        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.muscle.position.y)-(self.lynn.position.y) ))
+    })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+        self.lynn.physicsBody?.velocity = (CGVector(dx: ((self.heart.position.x) + 80) - (self.lynn.position.x), dy:0))
+        self.pinkLeft()
+    })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
+    self.heartmoved2()
+        self.lynn.isHidden = true
+        self.lynn.position = CGPoint(x: self.size.width/2, y: 30)
+    })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(7), execute: {
+        self.lynn.isHidden = false
+        self.pinkForward()
         
-            
-        })
-        
-        } else if  touchLocation.x <= 50 && touchLocation.y <= 50 {
-        
-        lynn.physicsBody?.velocity = (CGVector(dx: (nutritions.position.x)-(lynn.position.x), dy:0 ))
-          
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-        self.takeNutritions()
-        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.nutritions.position.y)-(self.lynn.position.y) ))
-        
-        AudioServicesPlayAlertSound(SystemSoundID(1355) )
-        })
-        
-        
-        
+    })
+}
+//    } else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (kidney.position.x) && touchLocation.y >= (brain.position.y) {
+//        lynn.physicsBody?.velocity = (CGVector(dx: (brain.position.x) - (lynn.position.x), dy: 0))
+//           pinkLeft()
+//            DispatchQueue.main.async {
+//                AudioServicesPlayAlertSound(SystemSoundID(1322) )
+//
+//            }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+//        self.takeNutritions()
+//        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.brain.position.y)-(self.lynn.position.y) ))
+//        })
+//
+//    } else if  touchLocation.x >= (lungs.position.x) && touchLocation.x < (brain.position.x) && touchLocation.y >= (lungs.position.y) {
+//        lynn.physicsBody?.velocity = (CGVector(dx: (lungs.position.x) - (lynn.position.x), dy: 0))
+//           pinkLeft()
+//        DispatchQueue.main.async {
+//            AudioServicesPlayAlertSound(SystemSoundID(1309) )
+//
+//        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+//        self.takeNutritions()
+//        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.lungs.position.y)-(self.lynn.position.y) ))
+//        })
+//    }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (lungs.position.x) && touchLocation.y >= (muscle.position.y) {
+//        lynn.physicsBody?.velocity = (CGVector(dx: (muscle.position.x)-(lynn.position.x), dy:0 ))
+//
+//            DispatchQueue.main.async {
+//                AudioServicesPlayAlertSound(SystemSoundID(1324) )
+//
+//            }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+//        self.takeNutritions()
+//        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.muscle.position.y)-(self.lynn.position.y) ))
+//
+//
+//        })
+//
+//        } else if  touchLocation.x <= 50 && touchLocation.y <= 50 {
+//
+//        lynn.physicsBody?.velocity = (CGVector(dx: (nutritions.position.x)-(lynn.position.x), dy:0 ))
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+//        self.takeNutritions()
+//        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.nutritions.position.y)-(self.lynn.position.y) ))
+//
+//        AudioServicesPlayAlertSound(SystemSoundID(1355) )
+//        })
+//
+//
+//
         }
-            
-    }
+
+
 func pinkLeft(){
 let textureAtlas = SKTextureAtlas(named: "Pink")
 let pinky = [textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 2"), textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 2"), textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 2"), textureAtlas.textureNamed("pink left 1")]
