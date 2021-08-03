@@ -130,7 +130,7 @@ let playerContact : UInt32 = 0x1 << -2
    
         
         background.subdivisionLevels = .min
-        background.size = CGSize(width: frame.maxX, height: frame.maxY)
+        background.size = CGSize(width: frame.size.width, height: frame.size.height)
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.zPosition = -1
         //background.anchorPoint = CGPoint(x: 0.0, y: 0.0)
