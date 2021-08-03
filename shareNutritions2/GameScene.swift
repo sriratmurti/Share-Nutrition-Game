@@ -244,19 +244,26 @@ let playerContact : UInt32 = 0x1 << -2
        
         
    
-        if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.x) + 70 && touchLocation.y >= (kidney.position.y) {
-        lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 3) - (lynn.position.y)))
+if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.x) + 70 && touchLocation.y >= (kidney.position.y) {
+    lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 3) - (lynn.position.y)))
     pinkForward()
-        DispatchQueue.main.async {
+    DispatchQueue.main.async {
             AudioServicesPlayAlertSound(SystemSoundID(1151) )
-        
         }
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-    self.player2moved2()
-        self.lynn.physicsBody?.velocity = CGVector(dx: (self.kidney.position.x)-(self.lynn.position.x) , dy: 0)
-        self.pinkRight()
+    self.lynn.physicsBody?.velocity = CGVector(dx: (self.kidney.position.x)-(self.lynn.position.x) , dy: 0)
+    self.pinkRight()
     })
     
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+    self.player2moved2()
+        self.lynn.isHidden = true
+        self.lynn.position = CGPoint(x: self.size.width/2, y: 30)
+    })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
+        self.lynn.isHidden = false
+        
+    })
     lynn.isHidden = false
            
     }else if touchLocation.x >= (heart.position.x) && touchLocation.x < (muscle.position.x) && touchLocation.y >= (heart.position.y) {
