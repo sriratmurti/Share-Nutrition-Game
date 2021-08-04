@@ -108,7 +108,7 @@ class GameScene: SKScene {
     let lungs = SKSpriteNode (imageNamed: "Paru sedih 1")
     let muscle = SKSpriteNode (imageNamed: "Otot sedih 1")
     let pauseButton = SKSpriteNode (imageNamed: "Pause")
-    
+    var call1 = String()
 
 
 let playerContact : UInt32 = 0x1 << -2
@@ -233,11 +233,13 @@ let playerContact : UInt32 = 0x1 << -2
         let touchLocation = touch.location(in: self)
         print("touched point: \(touchLocation)")
        
-        
+      
    
 if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.x) + 70 && touchLocation.y >= (kidney.position.y) {
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 20) - (lynn.position.y)))
     pinkForward()
+    call1 = "Kidney"
+    
     
     DispatchQueue.main.async {
             AudioServicesPlayAlertSound(SystemSoundID(1151) )
@@ -255,7 +257,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
         self.lynn.isHidden = false
-        
+        self.kidneyUp()
     })
     
            
@@ -287,7 +289,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
         self.lynn.isHidden = false
         self.pinkForward()
-        
+        self.lungsUp()
     })
 }else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (brain.position.x) + 95 && touchLocation.y >= (brain.position.y) && touchLocation.y < (brain.position.y) + 95 {
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: (brain.position.y) - (lynn.position.y)))
@@ -305,10 +307,9 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.lynn.isHidden = false
     })
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
-        self.popup()
-        popUpScene(size: CGSize(width: 844, height: 390)).brainPop()
-        
+        self.brainUp()
     })
+    
 } else if  touchLocation.x >= (heart.position.x) && touchLocation.x < (heart.position.x) + 95 && touchLocation.y >= (heart.position.y) && touchLocation.y < (heart.position.y) + 95{
         lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y)-(lynn.position.y)) + 60))
            pinkForward()
@@ -333,7 +334,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     
         self.lynn.isHidden = false
         self.pinkForward()
-        
+        self.heartUp()
     })
 }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((muscle.position.y) - (muscle.position.y)) + 60 ))
@@ -355,43 +356,101 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.pinkForward()
         self.lynn.isHidden = false
         
+        self.muscleUp()
     })
 }else if touchLocation.x >= pauseButton.position.x && touchLocation.x < (pauseButton.position.x) + 60 && touchLocation.y >= pauseButton.position.y && touchLocation.y < (pauseButton.position.y) + 60{
    brainHappy()
-    let scene = PausePage(size: CGSize(width: size.width, height: size.height))
-    scene.scaleMode = scaleMode
+    let scene = PausePage(size: CGSize(width: self.size.width, height: self.size.height))
+    scene.scaleMode = self.scaleMode
        // Set the scale mode to scale to fit the window
      let sKView = self.view as! SKView
         // Load the SKScene from 'GameScene.sks'
-        
-            
             // Present the scene
 
         sKView.presentScene(scene)
         sKView.ignoresSiblingOrder = true
         sKView.showsFPS = true
         sKView.showsNodeCount = true
+
     
 }
     }
-    func popup() {
-    
-    let scene = popUpScene(size: CGSize(width: size.width, height: size.height))
-    scene.scaleMode = scaleMode
+    func brainUp() {
+
+    let scene = brainPop(size: CGSize(width: self.size.width, height: self.size.height))
+    scene.scaleMode = self.scaleMode
        // Set the scale mode to scale to fit the window
      let sKView = self.view as! SKView
         // Load the SKScene from 'GameScene.sks'
-        
-            
             // Present the scene
 
         sKView.presentScene(scene)
         sKView.ignoresSiblingOrder = true
         sKView.showsFPS = true
         sKView.showsNodeCount = true
-    
-    }
 
+ }
+    func kidneyUp() {
+
+    let scene = kidneyPop(size: CGSize(width: self.size.width, height: self.size.height))
+    scene.scaleMode = self.scaleMode
+       // Set the scale mode to scale to fit the window
+     let sKView = self.view as! SKView
+        // Load the SKScene from 'GameScene.sks'
+            // Present the scene
+
+        sKView.presentScene(scene)
+        sKView.ignoresSiblingOrder = true
+        sKView.showsFPS = true
+        sKView.showsNodeCount = true
+
+ }
+    func heartUp() {
+
+    let scene = heartPop(size: CGSize(width: self.size.width, height: self.size.height))
+    scene.scaleMode = self.scaleMode
+       // Set the scale mode to scale to fit the window
+     let sKView = self.view as! SKView
+        // Load the SKScene from 'GameScene.sks'
+            // Present the scene
+
+        sKView.presentScene(scene)
+        sKView.ignoresSiblingOrder = true
+        sKView.showsFPS = true
+        sKView.showsNodeCount = true
+
+ }
+    func lungsUp() {
+
+    let scene = lungsPop(size: CGSize(width: self.size.width, height: self.size.height))
+    scene.scaleMode = self.scaleMode
+       // Set the scale mode to scale to fit the window
+     let sKView = self.view as! SKView
+        // Load the SKScene from 'GameScene.sks'
+            // Present the scene
+
+        sKView.presentScene(scene)
+        sKView.ignoresSiblingOrder = true
+        sKView.showsFPS = true
+        sKView.showsNodeCount = true
+
+ }
+    func muscleUp() {
+
+    let scene = musclePop(size: CGSize(width: self.size.width, height: self.size.height))
+    scene.scaleMode = self.scaleMode
+       // Set the scale mode to scale to fit the window
+     let sKView = self.view as! SKView
+        // Load the SKScene from 'GameScene.sks'
+            // Present the scene
+
+        sKView.presentScene(scene)
+        sKView.ignoresSiblingOrder = true
+        sKView.showsFPS = true
+        sKView.showsNodeCount = true
+
+ }
+    
 func pinkLeft(){
 let textureAtlas = SKTextureAtlas(named: "Pink")
 let pinky = [textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 2"), textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 2"), textureAtlas.textureNamed("pink left 1"), textureAtlas.textureNamed("pink left 2"), textureAtlas.textureNamed("pink left 1")]
@@ -606,11 +665,12 @@ lynn.run(animateAction)
         let lungsSadTexture = Lungs
         let animateAction = SKAction.animate(with:lungsSadTexture, timePerFrame: 0.5)
         lungs.run(animateAction)
-        }
+//        }
 //    override func update(_ currentTime: TimeInterval) {
-//        let reveal = SKTransition.flipHorizontal(withDuration: 1.0)
-//        var winner = String()
-//
+//       // let reveal = SKTransition.flipHorizontal(withDuration: 1.0)
+//        var call = String()
+//    }
+////
 //        if player1.position.x <= 10{
 //            print("player 2 menang")
 //            winner = "Player 2"
@@ -624,7 +684,7 @@ lynn.run(animateAction)
 //        }
 //    }
     
-    
+    }
 }
 extension GameScene: SKPhysicsContactDelegate{
     func didBegin(_ contact: SKPhysicsContact) {

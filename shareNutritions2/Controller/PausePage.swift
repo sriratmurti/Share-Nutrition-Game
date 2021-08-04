@@ -11,6 +11,7 @@ let popUp = SKSpriteNode (imageNamed: "pop up game")
 let help = SKSpriteNode (imageNamed: "Tanda tanya")
 let out = SKSpriteNode (imageNamed: "Out")
 let labelOut = SKLabelNode (fontNamed: "Chalkboard SE")
+let close = SKSpriteNode (imageNamed: "Quit")
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -18,6 +19,12 @@ let labelOut = SKLabelNode (fontNamed: "Chalkboard SE")
    
     override init(size: CGSize) {
         super.init(size: size)
+        
+        
+        close.size = CGSize(width: 60, height: 60)
+        close.position = CGPoint (x: size.width/3, y: size.height - 50)
+        close.zPosition = 2
+        addChild(close)
         
         labelOut.fontSize = 36
         labelOut.fontColor = .white
@@ -51,7 +58,25 @@ let labelOut = SKLabelNode (fontNamed: "Chalkboard SE")
         out.zPosition = 2
         addChild(out)
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else{return}
+        let touchLocation = touch.location(in: self)
+        print("touched point: \(touchLocation)")
+        
+        if touchLocation.x >= close.position.x && touchLocation.x < (close.position.x) + 60 && touchLocation.y >= close.position.y {
+            let scene = GameScene(size: CGSize(width: self.size.width, height: self.size.height))
+            scene.scaleMode = self.scaleMode
+               // Set the scale mode to scale to fit the window
+             let sKView = self.view as! SKView
+                // Load the SKScene from 'GameScene.sks'
+                    // Present the scene
+
+                sKView.presentScene(scene)
+                sKView.ignoresSiblingOrder = true
+                sKView.showsFPS = true
+                sKView.showsNodeCount = true
+        }
+    }
 }
     
     
