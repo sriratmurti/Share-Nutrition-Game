@@ -16,6 +16,22 @@
 		6D20409726BAFE2100AA9C89 /* stortel9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D20409326BAFE2100AA9C89 /* stortel9.mp3 */; };
 		6D20409826BAFE2100AA9C89 /* stortel7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D20409426BAFE2100AA9C89 /* stortel7.mp3 */; };
 		6D20409926BAFE2100AA9C89 /* stortel6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D20409526BAFE2100AA9C89 /* stortel6.mp3 */; };
+		6D2040AB26BAFE9300AA9C89 /* Toksin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D20409B26BAFE9200AA9C89 /* Toksin.gif */; };
+		6D2040AC26BAFE9300AA9C89 /* Sweat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D20409C26BAFE9200AA9C89 /* Sweat.gif */; };
+		6D2040AD26BAFE9300AA9C89 /* Presence.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D20409D26BAFE9200AA9C89 /* Presence.gif */; };
+		6D2040AE26BAFE9300AA9C89 /* Secret.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D20409E26BAFE9200AA9C89 /* Secret.gif */; };
+		6D2040AF26BAFE9300AA9C89 /* Benefit.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D20409F26BAFE9200AA9C89 /* Benefit.gif */; };
+		6D2040B026BAFE9300AA9C89 /* Superman Not Me.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A026BAFE9200AA9C89 /* Superman Not Me.gif */; };
+		6D2040B126BAFE9300AA9C89 /* Child.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A126BAFE9200AA9C89 /* Child.gif */; };
+		6D2040B226BAFE9300AA9C89 /* Hero Lynn.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A226BAFE9200AA9C89 /* Hero Lynn.gif */; };
+		6D2040B326BAFE9300AA9C89 /* contain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A326BAFE9200AA9C89 /* contain.gif */; };
+		6D2040B426BAFE9300AA9C89 /* more water.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A426BAFE9200AA9C89 /* more water.gif */; };
+		6D2040B526BAFE9300AA9C89 /* cry.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A526BAFE9200AA9C89 /* cry.gif */; };
+		6D2040B626BAFE9300AA9C89 /* weak.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A626BAFE9200AA9C89 /* weak.gif */; };
+		6D2040B726BAFE9300AA9C89 /* Minum.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A726BAFE9200AA9C89 /* Minum.gif */; };
+		6D2040B826BAFE9300AA9C89 /* Organ.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A826BAFE9200AA9C89 /* Organ.gif */; };
+		6D2040B926BAFE9300AA9C89 /* Lembab.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040A926BAFE9200AA9C89 /* Lembab.gif */; };
+		6D2040BA26BAFE9300AA9C89 /* Profil.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D2040AA26BAFE9300AA9C89 /* Profil.gif */; };
 		E20FBF2926B9A42A00529564 /* function.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20FBF2826B9A42A00529564 /* function.swift */; };
 		E2532C6526B6DAF400748F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2532C6426B6DAF400748F74 /* AppDelegate.swift */; };
 		E2532C6726B6DAF400748F74 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2532C6626B6DAF400748F74 /* GameScene.sks */; };
@@ -84,6 +100,22 @@
 		6D20409326BAFE2100AA9C89 /* stortel9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel9.mp3; sourceTree = "<group>"; };
 		6D20409426BAFE2100AA9C89 /* stortel7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel7.mp3; sourceTree = "<group>"; };
 		6D20409526BAFE2100AA9C89 /* stortel6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel6.mp3; sourceTree = "<group>"; };
+		6D20409B26BAFE9200AA9C89 /* Toksin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Toksin.gif; sourceTree = "<group>"; };
+		6D20409C26BAFE9200AA9C89 /* Sweat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Sweat.gif; sourceTree = "<group>"; };
+		6D20409D26BAFE9200AA9C89 /* Presence.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Presence.gif; sourceTree = "<group>"; };
+		6D20409E26BAFE9200AA9C89 /* Secret.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Secret.gif; sourceTree = "<group>"; };
+		6D20409F26BAFE9200AA9C89 /* Benefit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Benefit.gif; sourceTree = "<group>"; };
+		6D2040A026BAFE9200AA9C89 /* Superman Not Me.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Superman Not Me.gif"; sourceTree = "<group>"; };
+		6D2040A126BAFE9200AA9C89 /* Child.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Child.gif; sourceTree = "<group>"; };
+		6D2040A226BAFE9200AA9C89 /* Hero Lynn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Hero Lynn.gif"; sourceTree = "<group>"; };
+		6D2040A326BAFE9200AA9C89 /* contain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = contain.gif; sourceTree = "<group>"; };
+		6D2040A426BAFE9200AA9C89 /* more water.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "more water.gif"; sourceTree = "<group>"; };
+		6D2040A526BAFE9200AA9C89 /* cry.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cry.gif; sourceTree = "<group>"; };
+		6D2040A626BAFE9200AA9C89 /* weak.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = weak.gif; sourceTree = "<group>"; };
+		6D2040A726BAFE9200AA9C89 /* Minum.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Minum.gif; sourceTree = "<group>"; };
+		6D2040A826BAFE9200AA9C89 /* Organ.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Organ.gif; sourceTree = "<group>"; };
+		6D2040A926BAFE9200AA9C89 /* Lembab.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Lembab.gif; sourceTree = "<group>"; };
+		6D2040AA26BAFE9300AA9C89 /* Profil.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Profil.gif; sourceTree = "<group>"; };
 		E20FBF2826B9A42A00529564 /* function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function.swift; sourceTree = "<group>"; };
 		E2532C6126B6DAF400748F74 /* shareNutritions2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shareNutritions2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2532C6426B6DAF400748F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +203,29 @@
 			path = "Voice Storytelling";
 			sourceTree = "<group>";
 		};
+		6D20409A26BAFE7400AA9C89 /* Animasi Lynn */ = {
+			isa = PBXGroup;
+			children = (
+				6D20409F26BAFE9200AA9C89 /* Benefit.gif */,
+				6D2040A126BAFE9200AA9C89 /* Child.gif */,
+				6D2040A326BAFE9200AA9C89 /* contain.gif */,
+				6D2040A526BAFE9200AA9C89 /* cry.gif */,
+				6D2040A226BAFE9200AA9C89 /* Hero Lynn.gif */,
+				6D2040A926BAFE9200AA9C89 /* Lembab.gif */,
+				6D2040A726BAFE9200AA9C89 /* Minum.gif */,
+				6D2040A426BAFE9200AA9C89 /* more water.gif */,
+				6D2040A826BAFE9200AA9C89 /* Organ.gif */,
+				6D20409D26BAFE9200AA9C89 /* Presence.gif */,
+				6D2040AA26BAFE9300AA9C89 /* Profil.gif */,
+				6D20409E26BAFE9200AA9C89 /* Secret.gif */,
+				6D2040A026BAFE9200AA9C89 /* Superman Not Me.gif */,
+				6D20409C26BAFE9200AA9C89 /* Sweat.gif */,
+				6D20409B26BAFE9200AA9C89 /* Toksin.gif */,
+				6D2040A626BAFE9200AA9C89 /* weak.gif */,
+			);
+			path = "Animasi Lynn";
+			sourceTree = "<group>";
+		};
 		E2532C5826B6DAF400748F74 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +245,7 @@
 		E2532C6326B6DAF400748F74 /* shareNutritions2 */ = {
 			isa = PBXGroup;
 			children = (
+				6D20409A26BAFE7400AA9C89 /* Animasi Lynn */,
 				6D20408726BAFAFC00AA9C89 /* Voice Storytelling */,
 				E2532C7126B6DAF400748F74 /* Assets.xcassets */,
 				E2532C7326B6DAF400748F74 /* Info.plist */,
@@ -367,12 +423,17 @@
 			files = (
 				6D20408D26BAFDF700AA9C89 /* stortel5.mp3 in Resources */,
 				E2EDA37126BAC9FF00C3D351 /* Benefit.gif in Resources */,
+				6D2040AF26BAFE9300AA9C89 /* Benefit.gif in Resources */,
 				E2EDA35E26BAC9D700C3D351 /* stortel9.mp3 in Resources */,
 				E2EDA35A26BAC9D700C3D351 /* stortel5.mp3 in Resources */,
 				E2EDA37626BAC9FF00C3D351 /* more water.gif in Resources */,
 				E2EDA37326BAC9FF00C3D351 /* Lembab.gif in Resources */,
 				E2EDA37A26BAC9FF00C3D351 /* Minum.gif in Resources */,
 				E2EDA37F26BAC9FF00C3D351 /* Secret.gif in Resources */,
+				6D2040B026BAFE9300AA9C89 /* Superman Not Me.gif in Resources */,
+				6D2040B126BAFE9300AA9C89 /* Child.gif in Resources */,
+				6D2040AD26BAFE9300AA9C89 /* Presence.gif in Resources */,
+				6D2040B626BAFE9300AA9C89 /* weak.gif in Resources */,
 				E2532C7026B6DAF400748F74 /* Main.storyboard in Resources */,
 				E2EDA37426BAC9FF00C3D351 /* Hero Lynn.gif in Resources */,
 				E2EDA35626BAC9D700C3D351 /* stortel2.mp3 in Resources */,
@@ -382,33 +443,44 @@
 				E2EDA38026BAC9FF00C3D351 /* weak.gif in Resources */,
 				E2EDA35526BAC9D700C3D351 /* stortel3 new.mp3 in Resources */,
 				E2EDA35B26BAC9D700C3D351 /* stortel4.mp3 in Resources */,
+				6D2040B326BAFE9300AA9C89 /* contain.gif in Resources */,
+				6D2040AC26BAFE9300AA9C89 /* Sweat.gif in Resources */,
+				6D2040B826BAFE9300AA9C89 /* Organ.gif in Resources */,
 				E2EDA37826BAC9FF00C3D351 /* cry.gif in Resources */,
+				6D2040AE26BAFE9300AA9C89 /* Secret.gif in Resources */,
 				E2EDA37E26BAC9FF00C3D351 /* Toksin.gif in Resources */,
 				6D20409026BAFDF700AA9C89 /* stortel4.mp3 in Resources */,
 				E2EDA35F26BAC9D700C3D351 /* stortel8.mp3 in Resources */,
 				E2EDA35D26BAC9D700C3D351 /* stortel11.mp3 in Resources */,
+				6D2040B726BAFE9300AA9C89 /* Minum.gif in Resources */,
 				E2EDA37526BAC9FF00C3D351 /* Presence.gif in Resources */,
+				6D2040B926BAFE9300AA9C89 /* Lembab.gif in Resources */,
 				E2EDA37D26BAC9FF00C3D351 /* Sweat.gif in Resources */,
 				E2EDA35326BAC9D700C3D351 /* stortel1.mp3 in Resources */,
 				6D20409926BAFE2100AA9C89 /* stortel6.mp3 in Resources */,
+				6D2040B226BAFE9300AA9C89 /* Hero Lynn.gif in Resources */,
 				E2EDA35726BAC9D700C3D351 /* sound1.mp3 in Resources */,
 				E2EDA35C26BAC9D700C3D351 /* stortel10.mp3 in Resources */,
 				6D20409126BAFDF700AA9C89 /* stortel3.mp3 in Resources */,
 				6D20409826BAFE2100AA9C89 /* stortel7.mp3 in Resources */,
 				E2532C7226B6DAF400748F74 /* Assets.xcassets in Resources */,
 				E2EDA37C26BAC9FF00C3D351 /* Child.gif in Resources */,
+				6D2040B426BAFE9300AA9C89 /* more water.gif in Resources */,
 				6D20408F26BAFDF700AA9C89 /* stortel2.mp3 in Resources */,
 				6D20408E26BAFDF700AA9C89 /* stortel1.mp3 in Resources */,
 				E2EDA35926BAC9D700C3D351 /* stortel7.mp3 in Resources */,
 				E2EDA35226BAC9D700C3D351 /* home page.mp3 in Resources */,
 				E2EDA35826BAC9D700C3D351 /* stortel6.mp3 in Resources */,
+				6D2040BA26BAFE9300AA9C89 /* Profil.gif in Resources */,
 				E2EDA37726BAC9FF00C3D351 /* Profil.gif in Resources */,
 				6D20409626BAFE2100AA9C89 /* stortel8.mp3 in Resources */,
+				6D2040B526BAFE9300AA9C89 /* cry.gif in Resources */,
 				E2EDA32326BAC94600C3D351 /* LaunchScreen.storyboard in Resources */,
 				E2532C6926B6DAF400748F74 /* Actions.sks in Resources */,
 				E2EDA37226BAC9FF00C3D351 /* Organ.gif in Resources */,
 				E2EDA37926BAC9FF00C3D351 /* contain.gif in Resources */,
 				E2EDA37B26BAC9FF00C3D351 /* Superman Not Me.gif in Resources */,
+				6D2040AB26BAFE9300AA9C89 /* Toksin.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
