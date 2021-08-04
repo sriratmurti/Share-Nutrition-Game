@@ -7,6 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D23FEB626BA3621004B466B /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEA826BA3620004B466B /* TipsViewController.swift */; };
+		6D23FEB726BA3621004B466B /* HomeScreen2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEA926BA3620004B466B /* HomeScreen2ViewController.swift */; };
+		6D23FEB826BA3621004B466B /* BerapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEAA26BA3620004B466B /* BerapaViewController.swift */; };
+		6D23FEB926BA3621004B466B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEAB26BA3620004B466B /* ViewController.swift */; };
+		6D23FEBA26BA3621004B466B /* MonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEAC26BA3620004B466B /* MonitorViewController.swift */; };
+		6D23FEBB26BA3621004B466B /* AyoMinumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEAD26BA3620004B466B /* AyoMinumViewController.swift */; };
+		6D23FEBC26BA3621004B466B /* StartingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEAE26BA3620004B466B /* StartingPageViewController.swift */; };
+		6D23FEBD26BA3621004B466B /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEAF26BA3620004B466B /* VideoCapture.swift */; };
+		6D23FEBE26BA3621004B466B /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEB026BA3620004B466B /* Predictor.swift */; };
+		6D23FEBF26BA3621004B466B /* poseEstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEB126BA3620004B466B /* poseEstimateViewController.swift */; };
+		6D23FEC026BA3621004B466B /* DataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEB226BA3621004B466B /* DataCollectionViewCell.swift */; };
+		6D23FEC126BA3621004B466B /* TentangLynnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEB326BA3621004B466B /* TentangLynnViewController.swift */; };
+		6D23FEC226BA3621004B466B /* Animasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEB426BA3621004B466B /* Animasi.swift */; };
+		6D23FEC326BA3621004B466B /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEB526BA3621004B466B /* HomeScreenViewController.swift */; };
+		6D23FED526BA3891004B466B /* Child.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEC526BA388F004B466B /* Child.gif */; };
+		6D23FED626BA3891004B466B /* Presence.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEC626BA388F004B466B /* Presence.gif */; };
+		6D23FED726BA3891004B466B /* Sweat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEC726BA388F004B466B /* Sweat.gif */; };
+		6D23FED826BA3891004B466B /* Secret.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEC826BA3890004B466B /* Secret.gif */; };
+		6D23FED926BA3891004B466B /* Hero Lynn.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEC926BA3890004B466B /* Hero Lynn.gif */; };
+		6D23FEDA26BA3891004B466B /* weak.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FECA26BA3890004B466B /* weak.gif */; };
+		6D23FEDB26BA3891004B466B /* cry.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FECB26BA3890004B466B /* cry.gif */; };
+		6D23FEDC26BA3891004B466B /* Benefit.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FECC26BA3890004B466B /* Benefit.gif */; };
+		6D23FEDD26BA3891004B466B /* more water.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FECD26BA3890004B466B /* more water.gif */; };
+		6D23FEDE26BA3891004B466B /* Profil.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FECE26BA3890004B466B /* Profil.gif */; };
+		6D23FEDF26BA3891004B466B /* Organ.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FECF26BA3890004B466B /* Organ.gif */; };
+		6D23FEE026BA3891004B466B /* Lembab.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FED026BA3890004B466B /* Lembab.gif */; };
+		6D23FEE126BA3891004B466B /* Superman Not Me.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FED126BA3890004B466B /* Superman Not Me.gif */; };
+		6D23FEE226BA3891004B466B /* Toksin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FED226BA3891004B466B /* Toksin.gif */; };
+		6D23FEE326BA3891004B466B /* contain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FED326BA3891004B466B /* contain.gif */; };
+		6D23FEE426BA3891004B466B /* Minum.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FED426BA3891004B466B /* Minum.gif */; };
+		6D23FEE626BA38B7004B466B /* PoseEstimation.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6D23FEE526BA38B7004B466B /* PoseEstimation.mlmodel */; };
+		6D23FEEA26BA392E004B466B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEE826BA392E004B466B /* LaunchScreen.storyboard */; };
+		6D23FEFA26BA39F7004B466B /* home page.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEEC26BA39F7004B466B /* home page.mp3 */; };
+		6D23FEFB26BA39F7004B466B /* stortel1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEED26BA39F7004B466B /* stortel1.mp3 */; };
+		6D23FEFC26BA39F7004B466B /* stortel3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEEE26BA39F7004B466B /* stortel3.mp3 */; };
+		6D23FEFD26BA39F7004B466B /* stortel3 new.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEEF26BA39F7004B466B /* stortel3 new.mp3 */; };
+		6D23FEFE26BA39F7004B466B /* stortel2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF026BA39F7004B466B /* stortel2.mp3 */; };
+		6D23FEFF26BA39F7004B466B /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF126BA39F7004B466B /* sound1.mp3 */; };
+		6D23FF0026BA39F7004B466B /* stortel6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF226BA39F7004B466B /* stortel6.mp3 */; };
+		6D23FF0126BA39F7004B466B /* stortel7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF326BA39F7004B466B /* stortel7.mp3 */; };
+		6D23FF0226BA39F7004B466B /* stortel5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF426BA39F7004B466B /* stortel5.mp3 */; };
+		6D23FF0326BA39F7004B466B /* stortel4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF526BA39F7004B466B /* stortel4.mp3 */; };
+		6D23FF0426BA39F7004B466B /* stortel10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF626BA39F7004B466B /* stortel10.mp3 */; };
+		6D23FF0526BA39F7004B466B /* stortel11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF726BA39F7004B466B /* stortel11.mp3 */; };
+		6D23FF0626BA39F7004B466B /* stortel9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF826BA39F7004B466B /* stortel9.mp3 */; };
+		6D23FF0726BA39F7004B466B /* stortel8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D23FEF926BA39F7004B466B /* stortel8.mp3 */; };
 		E20FBF2926B9A42A00529564 /* function.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20FBF2826B9A42A00529564 /* function.swift */; };
 		E2532C6526B6DAF400748F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2532C6426B6DAF400748F74 /* AppDelegate.swift */; };
 		E2532C6726B6DAF400748F74 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2532C6626B6DAF400748F74 /* GameScene.sks */; };
@@ -19,6 +65,66 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D23FEA826BA3620004B466B /* TipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		6D23FEA926BA3620004B466B /* HomeScreen2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen2ViewController.swift; sourceTree = "<group>"; };
+		6D23FEAA26BA3620004B466B /* BerapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerapaViewController.swift; sourceTree = "<group>"; };
+		6D23FEAB26BA3620004B466B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D23FEAC26BA3620004B466B /* MonitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorViewController.swift; sourceTree = "<group>"; };
+		6D23FEAD26BA3620004B466B /* AyoMinumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AyoMinumViewController.swift; sourceTree = "<group>"; };
+		6D23FEAE26BA3620004B466B /* StartingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingPageViewController.swift; sourceTree = "<group>"; };
+		6D23FEAF26BA3620004B466B /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		6D23FEB026BA3620004B466B /* Predictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		6D23FEB126BA3620004B466B /* poseEstimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = poseEstimateViewController.swift; sourceTree = "<group>"; };
+		6D23FEB226BA3621004B466B /* DataCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCollectionViewCell.swift; sourceTree = "<group>"; };
+		6D23FEB326BA3621004B466B /* TentangLynnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TentangLynnViewController.swift; sourceTree = "<group>"; };
+		6D23FEB426BA3621004B466B /* Animasi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animasi.swift; sourceTree = "<group>"; };
+		6D23FEB526BA3621004B466B /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		6D23FEC526BA388F004B466B /* Child.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Child.gif; path = "../../../Lynn New/Child.gif"; sourceTree = "<group>"; };
+		6D23FEC626BA388F004B466B /* Presence.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Presence.gif; path = "../../../Lynn New/Presence.gif"; sourceTree = "<group>"; };
+		6D23FEC726BA388F004B466B /* Sweat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Sweat.gif; path = "../../../Lynn New/Sweat.gif"; sourceTree = "<group>"; };
+		6D23FEC826BA3890004B466B /* Secret.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Secret.gif; path = "../../../Lynn New/Secret.gif"; sourceTree = "<group>"; };
+		6D23FEC926BA3890004B466B /* Hero Lynn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Hero Lynn.gif"; path = "../../../Lynn New/Hero Lynn.gif"; sourceTree = "<group>"; };
+		6D23FECA26BA3890004B466B /* weak.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = weak.gif; path = "../../../Lynn New/weak.gif"; sourceTree = "<group>"; };
+		6D23FECB26BA3890004B466B /* cry.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = cry.gif; path = "../../../Lynn New/cry.gif"; sourceTree = "<group>"; };
+		6D23FECC26BA3890004B466B /* Benefit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Benefit.gif; path = "../../../Lynn New/Benefit.gif"; sourceTree = "<group>"; };
+		6D23FECD26BA3890004B466B /* more water.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "more water.gif"; path = "../../../Lynn New/more water.gif"; sourceTree = "<group>"; };
+		6D23FECE26BA3890004B466B /* Profil.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Profil.gif; path = "../../../Lynn New/Profil.gif"; sourceTree = "<group>"; };
+		6D23FECF26BA3890004B466B /* Organ.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Organ.gif; path = "../../../Lynn New/Organ.gif"; sourceTree = "<group>"; };
+		6D23FED026BA3890004B466B /* Lembab.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Lembab.gif; path = "../../../Lynn New/Lembab.gif"; sourceTree = "<group>"; };
+		6D23FED126BA3890004B466B /* Superman Not Me.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Superman Not Me.gif"; path = "../../../Lynn New/Superman Not Me.gif"; sourceTree = "<group>"; };
+		6D23FED226BA3891004B466B /* Toksin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Toksin.gif; path = "../../../Lynn New/Toksin.gif"; sourceTree = "<group>"; };
+		6D23FED326BA3891004B466B /* contain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = contain.gif; path = "../../../Lynn New/contain.gif"; sourceTree = "<group>"; };
+		6D23FED426BA3891004B466B /* Minum.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Minum.gif; path = "../../../Lynn New/Minum.gif"; sourceTree = "<group>"; };
+		6D23FEE526BA38B7004B466B /* PoseEstimation.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = PoseEstimation.mlmodel; path = "../../Lynn New/Lynn New/PoseEstimation.mlmodel"; sourceTree = "<group>"; };
+		6D23FEE926BA392E004B466B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Lynn New/Lynn New/View/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		6D23FEEC26BA39F7004B466B /* home page.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "home page.mp3"; sourceTree = "<group>"; };
+		6D23FEED26BA39F7004B466B /* stortel1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel1.mp3; sourceTree = "<group>"; };
+		6D23FEEE26BA39F7004B466B /* stortel3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel3.mp3; sourceTree = "<group>"; };
+		6D23FEEF26BA39F7004B466B /* stortel3 new.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "stortel3 new.mp3"; sourceTree = "<group>"; };
+		6D23FEF026BA39F7004B466B /* stortel2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel2.mp3; sourceTree = "<group>"; };
+		6D23FEF126BA39F7004B466B /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
+		6D23FEF226BA39F7004B466B /* stortel6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel6.mp3; sourceTree = "<group>"; };
+		6D23FEF326BA39F7004B466B /* stortel7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel7.mp3; sourceTree = "<group>"; };
+		6D23FEF426BA39F7004B466B /* stortel5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel5.mp3; sourceTree = "<group>"; };
+		6D23FEF526BA39F7004B466B /* stortel4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel4.mp3; sourceTree = "<group>"; };
+		6D23FEF626BA39F7004B466B /* stortel10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel10.mp3; sourceTree = "<group>"; };
+		6D23FEF726BA39F7004B466B /* stortel11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel11.mp3; sourceTree = "<group>"; };
+		6D23FEF826BA39F7004B466B /* stortel9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel9.mp3; sourceTree = "<group>"; };
+		6D23FEF926BA39F7004B466B /* stortel8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel8.mp3; sourceTree = "<group>"; };
+		6D23FF0926BA39FD004B466B /* home page.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "home page.mp3"; sourceTree = "<group>"; };
+		6D23FF0A26BA39FD004B466B /* stortel3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel3.mp3; sourceTree = "<group>"; };
+		6D23FF0B26BA39FD004B466B /* stortel9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel9.mp3; sourceTree = "<group>"; };
+		6D23FF0C26BA39FD004B466B /* stortel8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel8.mp3; sourceTree = "<group>"; };
+		6D23FF0D26BA39FD004B466B /* stortel6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel6.mp3; sourceTree = "<group>"; };
+		6D23FF0E26BA39FD004B466B /* stortel3 new.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "stortel3 new.mp3"; sourceTree = "<group>"; };
+		6D23FF0F26BA39FD004B466B /* stortel10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel10.mp3; sourceTree = "<group>"; };
+		6D23FF1026BA39FE004B466B /* stortel2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel2.mp3; sourceTree = "<group>"; };
+		6D23FF1126BA39FE004B466B /* stortel7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel7.mp3; sourceTree = "<group>"; };
+		6D23FF1226BA39FE004B466B /* stortel1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel1.mp3; sourceTree = "<group>"; };
+		6D23FF1326BA39FE004B466B /* stortel4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel4.mp3; sourceTree = "<group>"; };
+		6D23FF1426BA39FE004B466B /* stortel11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel11.mp3; sourceTree = "<group>"; };
+		6D23FF1526BA39FE004B466B /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
+		6D23FF1626BA39FE004B466B /* stortel5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel5.mp3; sourceTree = "<group>"; };
 		E20FBF2826B9A42A00529564 /* function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function.swift; sourceTree = "<group>"; };
 		E2532C6126B6DAF400748F74 /* shareNutritions2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shareNutritions2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2532C6426B6DAF400748F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +149,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D23FEA726BA3620004B466B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D23FEEB26BA39F7004B466B /* Audio */,
+				6D23FEA826BA3620004B466B /* TipsViewController.swift */,
+				6D23FEA926BA3620004B466B /* HomeScreen2ViewController.swift */,
+				6D23FEAA26BA3620004B466B /* BerapaViewController.swift */,
+				6D23FEAB26BA3620004B466B /* ViewController.swift */,
+				6D23FEAC26BA3620004B466B /* MonitorViewController.swift */,
+				6D23FEAD26BA3620004B466B /* AyoMinumViewController.swift */,
+				6D23FEAE26BA3620004B466B /* StartingPageViewController.swift */,
+				6D23FEAF26BA3620004B466B /* VideoCapture.swift */,
+				6D23FEB026BA3620004B466B /* Predictor.swift */,
+				6D23FEB126BA3620004B466B /* poseEstimateViewController.swift */,
+				6D23FEB226BA3621004B466B /* DataCollectionViewCell.swift */,
+				6D23FEB326BA3621004B466B /* TentangLynnViewController.swift */,
+				6D23FEB426BA3621004B466B /* Animasi.swift */,
+				6D23FEB526BA3621004B466B /* HomeScreenViewController.swift */,
+			);
+			name = Controller;
+			path = "../../Lynn New/Lynn New/Controller";
+			sourceTree = "<group>";
+		};
+		6D23FEC426BA387A004B466B /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				6D23FECC26BA3890004B466B /* Benefit.gif */,
+				6D23FEC526BA388F004B466B /* Child.gif */,
+				6D23FED326BA3891004B466B /* contain.gif */,
+				6D23FECB26BA3890004B466B /* cry.gif */,
+				6D23FEC926BA3890004B466B /* Hero Lynn.gif */,
+				6D23FED026BA3890004B466B /* Lembab.gif */,
+				6D23FED426BA3891004B466B /* Minum.gif */,
+				6D23FECD26BA3890004B466B /* more water.gif */,
+				6D23FECF26BA3890004B466B /* Organ.gif */,
+				6D23FEC626BA388F004B466B /* Presence.gif */,
+				6D23FECE26BA3890004B466B /* Profil.gif */,
+				6D23FEC826BA3890004B466B /* Secret.gif */,
+				6D23FED126BA3890004B466B /* Superman Not Me.gif */,
+				6D23FEC726BA388F004B466B /* Sweat.gif */,
+				6D23FED226BA3891004B466B /* Toksin.gif */,
+				6D23FECA26BA3890004B466B /* weak.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		6D23FEE726BA3908004B466B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2532C6E26B6DAF400748F74 /* Main.storyboard */,
+				6D23FEE826BA392E004B466B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D23FEEB26BA39F7004B466B /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				6D23FEEC26BA39F7004B466B /* home page.mp3 */,
+				6D23FEED26BA39F7004B466B /* stortel1.mp3 */,
+				6D23FEEE26BA39F7004B466B /* stortel3.mp3 */,
+				6D23FEEF26BA39F7004B466B /* stortel3 new.mp3 */,
+				6D23FEF026BA39F7004B466B /* stortel2.mp3 */,
+				6D23FEF126BA39F7004B466B /* sound1.mp3 */,
+				6D23FEF226BA39F7004B466B /* stortel6.mp3 */,
+				6D23FEF326BA39F7004B466B /* stortel7.mp3 */,
+				6D23FEF426BA39F7004B466B /* stortel5.mp3 */,
+				6D23FEF526BA39F7004B466B /* stortel4.mp3 */,
+				6D23FEF626BA39F7004B466B /* stortel10.mp3 */,
+				6D23FEF726BA39F7004B466B /* stortel11.mp3 */,
+				6D23FEF826BA39F7004B466B /* stortel9.mp3 */,
+				6D23FEF926BA39F7004B466B /* stortel8.mp3 */,
+			);
+			name = Audio;
+			path = ../Audio;
+			sourceTree = "<group>";
+		};
+		6D23FF0826BA39FD004B466B /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				6D23FF0926BA39FD004B466B /* home page.mp3 */,
+				6D23FF1226BA39FE004B466B /* stortel1.mp3 */,
+				6D23FF0A26BA39FD004B466B /* stortel3.mp3 */,
+				6D23FF0E26BA39FD004B466B /* stortel3 new.mp3 */,
+				6D23FF1026BA39FE004B466B /* stortel2.mp3 */,
+				6D23FF1526BA39FE004B466B /* sound1.mp3 */,
+				6D23FF0D26BA39FD004B466B /* stortel6.mp3 */,
+				6D23FF1126BA39FE004B466B /* stortel7.mp3 */,
+				6D23FF1626BA39FE004B466B /* stortel5.mp3 */,
+				6D23FF1326BA39FE004B466B /* stortel4.mp3 */,
+				6D23FF0F26BA39FD004B466B /* stortel10.mp3 */,
+				6D23FF1426BA39FE004B466B /* stortel11.mp3 */,
+				6D23FF0B26BA39FD004B466B /* stortel9.mp3 */,
+				6D23FF0C26BA39FD004B466B /* stortel8.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		E2532C5826B6DAF400748F74 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +266,20 @@
 		E2532C6326B6DAF400748F74 /* shareNutritions2 */ = {
 			isa = PBXGroup;
 			children = (
+				6D23FF0826BA39FD004B466B /* Audio */,
+				6D23FEE726BA3908004B466B /* View */,
+				6D23FEC426BA387A004B466B /* Gif */,
+				6D23FEA726BA3620004B466B /* Controller */,
 				E20FBF2826B9A42A00529564 /* function.swift */,
 				E2532C6426B6DAF400748F74 /* AppDelegate.swift */,
 				E2532C6626B6DAF400748F74 /* GameScene.sks */,
 				E2532C6826B6DAF400748F74 /* Actions.sks */,
 				E2532C6A26B6DAF400748F74 /* GameScene.swift */,
 				E2532C6C26B6DAF400748F74 /* GameViewController.swift */,
-				E2532C6E26B6DAF400748F74 /* Main.storyboard */,
 				E2532C7126B6DAF400748F74 /* Assets.xcassets */,
 				E29A959726B9415800A6820D /* StartingPage.swift */,
 				E2532C7326B6DAF400748F74 /* Info.plist */,
+				6D23FEE526BA38B7004B466B /* PoseEstimation.mlmodel */,
 			);
 			path = shareNutritions2;
 			sourceTree = "<group>";
@@ -134,8 +342,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2532C7026B6DAF400748F74 /* Main.storyboard in Resources */,
+				6D23FEE026BA3891004B466B /* Lembab.gif in Resources */,
+				6D23FF0126BA39F7004B466B /* stortel7.mp3 in Resources */,
+				6D23FEE126BA3891004B466B /* Superman Not Me.gif in Resources */,
+				6D23FEFE26BA39F7004B466B /* stortel2.mp3 in Resources */,
+				6D23FF0326BA39F7004B466B /* stortel4.mp3 in Resources */,
+				6D23FEDD26BA3891004B466B /* more water.gif in Resources */,
+				6D23FF0226BA39F7004B466B /* stortel5.mp3 in Resources */,
+				6D23FEDE26BA3891004B466B /* Profil.gif in Resources */,
+				6D23FEFA26BA39F7004B466B /* home page.mp3 in Resources */,
+				6D23FED626BA3891004B466B /* Presence.gif in Resources */,
+				6D23FEDA26BA3891004B466B /* weak.gif in Resources */,
+				6D23FEFF26BA39F7004B466B /* sound1.mp3 in Resources */,
+				6D23FED526BA3891004B466B /* Child.gif in Resources */,
+				6D23FEFD26BA39F7004B466B /* stortel3 new.mp3 in Resources */,
+				6D23FEE226BA3891004B466B /* Toksin.gif in Resources */,
+				6D23FF0726BA39F7004B466B /* stortel8.mp3 in Resources */,
+				6D23FF0626BA39F7004B466B /* stortel9.mp3 in Resources */,
+				6D23FEDB26BA3891004B466B /* cry.gif in Resources */,
 				E2532C6726B6DAF400748F74 /* GameScene.sks in Resources */,
+				6D23FEE426BA3891004B466B /* Minum.gif in Resources */,
+				6D23FEDF26BA3891004B466B /* Organ.gif in Resources */,
+				6D23FF0026BA39F7004B466B /* stortel6.mp3 in Resources */,
+				6D23FED926BA3891004B466B /* Hero Lynn.gif in Resources */,
+				6D23FEFB26BA39F7004B466B /* stortel1.mp3 in Resources */,
+				6D23FED826BA3891004B466B /* Secret.gif in Resources */,
+				6D23FEDC26BA3891004B466B /* Benefit.gif in Resources */,
+				6D23FF0426BA39F7004B466B /* stortel10.mp3 in Resources */,
+				6D23FEFC26BA39F7004B466B /* stortel3.mp3 in Resources */,
 				E2532C7226B6DAF400748F74 /* Assets.xcassets in Resources */,
+				6D23FED726BA3891004B466B /* Sweat.gif in Resources */,
+				6D23FEEA26BA392E004B466B /* LaunchScreen.storyboard in Resources */,
+				6D23FF0526BA39F7004B466B /* stortel11.mp3 in Resources */,
+				6D23FEE326BA3891004B466B /* contain.gif in Resources */,
 				E2532C6926B6DAF400748F74 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,17 +386,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D23FEC226BA3621004B466B /* Animasi.swift in Sources */,
 				E2532C6B26B6DAF400748F74 /* GameScene.swift in Sources */,
 				E2532C6D26B6DAF400748F74 /* GameViewController.swift in Sources */,
+				6D23FEBC26BA3621004B466B /* StartingPageViewController.swift in Sources */,
+				6D23FEB726BA3621004B466B /* HomeScreen2ViewController.swift in Sources */,
+				6D23FEBE26BA3621004B466B /* Predictor.swift in Sources */,
+				6D23FEBD26BA3621004B466B /* VideoCapture.swift in Sources */,
+				6D23FEBA26BA3621004B466B /* MonitorViewController.swift in Sources */,
+				6D23FEC326BA3621004B466B /* HomeScreenViewController.swift in Sources */,
+				6D23FEB926BA3621004B466B /* ViewController.swift in Sources */,
+				6D23FEC126BA3621004B466B /* TentangLynnViewController.swift in Sources */,
+				6D23FEC026BA3621004B466B /* DataCollectionViewCell.swift in Sources */,
+				6D23FEB626BA3621004B466B /* TipsViewController.swift in Sources */,
 				E29A959826B9415800A6820D /* StartingPage.swift in Sources */,
+				6D23FEE626BA38B7004B466B /* PoseEstimation.mlmodel in Sources */,
+				6D23FEBB26BA3621004B466B /* AyoMinumViewController.swift in Sources */,
 				E2532C6526B6DAF400748F74 /* AppDelegate.swift in Sources */,
 				E20FBF2926B9A42A00529564 /* function.swift in Sources */,
+				6D23FEBF26BA3621004B466B /* poseEstimateViewController.swift in Sources */,
+				6D23FEB826BA3621004B466B /* BerapaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		6D23FEE826BA392E004B466B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D23FEE926BA392E004B466B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		E2532C6E26B6DAF400748F74 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

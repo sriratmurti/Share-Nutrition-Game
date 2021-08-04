@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L6M-2G-wW2">
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="Nutrition Game" autoresizesArchivedViewToFullSize="NO" title="Game View Controller" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="shareNutritions2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4X0-8t-5rl"/>
+                        <viewControllerLayoutGuide type="bottom" id="8WF-Pd-bkb"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LV8-KM-Z3g">
+                                <rect key="frame" x="804" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="tzu-L6-EQ5"/>
+                                    <constraint firstAttribute="height" constant="40" id="xyG-2f-6Qm"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Pause"/>
+                                <connections>
+                                    <segue destination="6By-aU-Oeb" kind="popoverPresentation" popoverAnchorView="LV8-KM-Z3g" id="kXT-Zc-Uxh">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LV8-KM-Z3g" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="7n4-A6-1P2"/>
+                            <constraint firstAttribute="trailing" secondItem="LV8-KM-Z3g" secondAttribute="trailing" id="qvj-m1-Rkh"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="844" height="390"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="844" height="390"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="2458"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AWW-fB-tgF">
+            <objects>
+                <viewController id="6By-aU-Oeb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KUe-Pq-c82"/>
+                        <viewControllerLayoutGuide type="bottom" id="KvP-YZ-WuM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TWG-ax-9S7">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background game 2.0 a" translatesAutoresizingMaskIntoConstraints="NO" id="xFP-Pr-Byf">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="390" id="5SI-IZ-j5e"/>
+                                    <constraint firstAttribute="width" constant="844" id="7yQ-Y5-eT8"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Page Help" translatesAutoresizingMaskIntoConstraints="NO" id="cTq-7G-GSl">
+                                <rect key="frame" x="24" y="21" width="796" height="349"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellow forward 1" translatesAutoresizingMaskIntoConstraints="NO" id="s5k-XD-7yg">
+                                <rect key="frame" x="159" y="67" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="CeO-Fa-bq1"/>
+                                    <constraint firstAttribute="height" constant="128" id="yEB-hP-lAQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organ-organ terlihat sedih. Mereka kekurangan nutrisi.Ayo bantu Lynn untuk mengantarkan nutrisi agar mereka senang!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcT-ep-8uh">
+                                <rect key="frame" x="69" y="178" width="301" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="301" id="FVP-tQ-gcQ"/>
+                                    <constraint firstAttribute="height" constant="84" id="rnH-TO-O8T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                <color key="textColor" red="0.1234147921" green="0.30637925859999998" blue="0.2745078802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN9-cD-iDJ">
+                                <rect key="frame" x="697" y="274" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="erN-fv-r7K"/>
+                                    <constraint firstAttribute="height" constant="50" id="meK-d5-D0F"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Sefron Kanan"/>
+                                <connections>
+                                    <segue destination="snO-FM-OHs" kind="popoverPresentation" popoverAnchorView="HN9-cD-iDJ" id="L2a-SX-8yr">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xFP-Pr-Byf" firstAttribute="leading" secondItem="TWG-ax-9S7" secondAttribute="leading" id="4j3-l9-lsk"/>
+                            <constraint firstAttribute="trailing" secondItem="xFP-Pr-Byf" secondAttribute="trailing" id="75z-dD-DGD"/>
+                            <constraint firstItem="cTq-7G-GSl" firstAttribute="centerY" secondItem="xFP-Pr-Byf" secondAttribute="centerY" id="91P-oO-Cfh"/>
+                            <constraint firstItem="JcT-ep-8uh" firstAttribute="top" secondItem="KUe-Pq-c82" secondAttribute="bottom" constant="178" id="ALE-Gu-Plh"/>
+                            <constraint firstItem="JcT-ep-8uh" firstAttribute="leading" secondItem="TWG-ax-9S7" secondAttribute="leading" constant="69" id="Gx0-ob-wO4"/>
+                            <constraint firstAttribute="trailing" secondItem="HN9-cD-iDJ" secondAttribute="trailing" constant="97" id="LRv-BR-dNL"/>
+                            <constraint firstAttribute="trailing" secondItem="s5k-XD-7yg" secondAttribute="trailing" constant="357" id="Nm9-Mz-ssa"/>
+                            <constraint firstAttribute="bottom" secondItem="xFP-Pr-Byf" secondAttribute="bottom" id="Rrw-eb-mQ5"/>
+                            <constraint firstItem="s5k-XD-7yg" firstAttribute="top" secondItem="KUe-Pq-c82" secondAttribute="bottom" constant="67" id="SfI-km-eiP"/>
+                            <constraint firstItem="xFP-Pr-Byf" firstAttribute="centerY" secondItem="TWG-ax-9S7" secondAttribute="centerY" id="UKT-sh-8si"/>
+                            <constraint firstItem="cTq-7G-GSl" firstAttribute="leading" secondItem="TWG-ax-9S7" secondAttribute="leadingMargin" constant="-40" id="Y20-4h-8SG"/>
+                            <constraint firstItem="s5k-XD-7yg" firstAttribute="leading" secondItem="TWG-ax-9S7" secondAttribute="leading" constant="159" id="aEt-Ds-n1l"/>
+                            <constraint firstItem="cTq-7G-GSl" firstAttribute="centerX" secondItem="xFP-Pr-Byf" secondAttribute="centerX" id="hjH-CB-Fmg"/>
+                            <constraint firstItem="xFP-Pr-Byf" firstAttribute="centerX" secondItem="TWG-ax-9S7" secondAttribute="centerX" id="hjX-Sh-wzo"/>
+                            <constraint firstItem="cTq-7G-GSl" firstAttribute="top" secondItem="KUe-Pq-c82" secondAttribute="bottom" constant="21" id="iby-Nk-qtJ"/>
+                            <constraint firstItem="KvP-YZ-WuM" firstAttribute="top" secondItem="HN9-cD-iDJ" secondAttribute="bottom" constant="45" id="rBB-Xd-p6w"/>
+                            <constraint firstItem="xFP-Pr-Byf" firstAttribute="top" secondItem="KUe-Pq-c82" secondAttribute="bottom" id="zUr-vy-WQJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBp-DS-4Nz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="2458"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2lG-ZD-s9N">
+            <objects>
+                <viewController id="snO-FM-OHs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w78-IG-XJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="aox-xk-zk0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GFD-sa-XT3">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background game 2.0 a" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-84-cOj">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="390" id="fw6-PG-9qi"/>
+                                    <constraint firstAttribute="width" constant="844" id="j6e-gZ-Xnr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Page Help" translatesAutoresizingMaskIntoConstraints="NO" id="bor-s1-9qZ">
+                                <rect key="frame" x="24" y="21" width="796" height="349"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellow forward 1" translatesAutoresizingMaskIntoConstraints="NO" id="04S-nf-ESb">
+                                <rect key="frame" x="159" y="67" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Qrs-wz-ONe"/>
+                                    <constraint firstAttribute="height" constant="128" id="pw3-Tb-sCk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan Organ untuk menggerakkan Lynn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hld-zZ-Nwh">
+                                <rect key="frame" x="69" y="178" width="301" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="C1G-Wv-PWp"/>
+                                    <constraint firstAttribute="width" constant="301" id="dKb-XY-8Et"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                <color key="textColor" red="0.1234147921" green="0.30637925859999998" blue="0.2745078802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdR-KM-sNZ">
+                                <rect key="frame" x="697" y="274" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2UV-Bh-VkL"/>
+                                    <constraint firstAttribute="height" constant="50" id="Sor-Jj-DAY"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Sefron Kanan"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLU-v7-Hb0">
+                                <rect key="frame" x="40" y="45" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7UV-cS-2VG"/>
+                                    <constraint firstAttribute="width" constant="50" id="a6c-Xl-YrP"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Quit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rYN-84-cOj" firstAttribute="leading" secondItem="GFD-sa-XT3" secondAttribute="leading" id="7W5-Hz-7TW"/>
+                            <constraint firstAttribute="bottom" secondItem="rYN-84-cOj" secondAttribute="bottom" id="EBa-4c-IHo"/>
+                            <constraint firstAttribute="trailing" secondItem="CdR-KM-sNZ" secondAttribute="trailing" constant="97" id="H4m-qN-dBX"/>
+                            <constraint firstAttribute="trailing" secondItem="04S-nf-ESb" secondAttribute="trailing" constant="357" id="J8u-3d-g1X"/>
+                            <constraint firstItem="04S-nf-ESb" firstAttribute="top" secondItem="w78-IG-XJ8" secondAttribute="bottom" constant="67" id="Nnt-NO-gyl"/>
+                            <constraint firstItem="cLU-v7-Hb0" firstAttribute="leading" secondItem="GFD-sa-XT3" secondAttribute="leading" constant="40" id="P2B-EZ-hqE"/>
+                            <constraint firstItem="04S-nf-ESb" firstAttribute="leading" secondItem="GFD-sa-XT3" secondAttribute="leading" constant="159" id="aJ4-9b-a1P"/>
+                            <constraint firstItem="rYN-84-cOj" firstAttribute="top" secondItem="w78-IG-XJ8" secondAttribute="bottom" id="cJD-K1-Rtf"/>
+                            <constraint firstItem="Hld-zZ-Nwh" firstAttribute="leading" secondItem="GFD-sa-XT3" secondAttribute="leading" constant="69" id="dTD-IW-EQg"/>
+                            <constraint firstItem="bor-s1-9qZ" firstAttribute="leading" secondItem="GFD-sa-XT3" secondAttribute="leadingMargin" constant="-40" id="dzd-7k-VMr"/>
+                            <constraint firstItem="cLU-v7-Hb0" firstAttribute="top" secondItem="w78-IG-XJ8" secondAttribute="bottom" constant="45" id="lae-Gm-XZQ"/>
+                            <constraint firstAttribute="trailing" secondItem="rYN-84-cOj" secondAttribute="trailing" id="mQf-m7-YqX"/>
+                            <constraint firstItem="bor-s1-9qZ" firstAttribute="centerY" secondItem="rYN-84-cOj" secondAttribute="centerY" id="mzX-og-WEK"/>
+                            <constraint firstItem="aox-xk-zk0" firstAttribute="top" secondItem="CdR-KM-sNZ" secondAttribute="bottom" constant="45" id="nmk-6L-QEe"/>
+                            <constraint firstItem="bor-s1-9qZ" firstAttribute="centerX" secondItem="rYN-84-cOj" secondAttribute="centerX" id="po9-bQ-5GQ"/>
+                            <constraint firstItem="rYN-84-cOj" firstAttribute="centerX" secondItem="GFD-sa-XT3" secondAttribute="centerX" id="qvr-ln-WN1"/>
+                            <constraint firstItem="rYN-84-cOj" firstAttribute="centerY" secondItem="GFD-sa-XT3" secondAttribute="centerY" id="sbb-Bv-qLp"/>
+                            <constraint firstItem="bor-s1-9qZ" firstAttribute="top" secondItem="w78-IG-XJ8" secondAttribute="bottom" constant="21" id="t3p-Hj-qJ6"/>
+                            <constraint firstItem="Hld-zZ-Nwh" firstAttribute="top" secondItem="w78-IG-XJ8" secondAttribute="bottom" constant="178" id="wjk-Ps-NAa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n99-q9-ew3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="3192"/>
+        </scene>
+        <!--Starting Page View Controller-->
+        <scene sceneID="HOd-bl-jX6">
+            <objects>
+                <viewController storyboardIdentifier="Starting Page" id="L6M-2G-wW2" customClass="StartingPageViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EN0-4u-hp3">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Starting page" translatesAutoresizingMaskIntoConstraints="NO" id="2OG-sG-QPz">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lynn Logo" translatesAutoresizingMaskIntoConstraints="NO" id="uj4-Zu-NT4">
+                                <rect key="frame" x="206" y="82" width="432" height="226"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0t-2x-kXo">
+                                <rect key="frame" x="27" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="JnC-tx-1sd"/>
+                                    <constraint firstAttribute="width" constant="80" id="Yg0-Dt-hPR"/>
+                                </constraints>
+                                <state key="normal" image="Quit"/>
+                                <connections>
+                                    <action selector="quitImageButtonTapped:" destination="L6M-2G-wW2" eventType="touchUpInside" id="mBm-78-f92"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWL-7J-BQN">
+                                <rect key="frame" x="737" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Tnc-JF-onC"/>
+                                    <constraint firstAttribute="height" constant="80" id="Wg7-FZ-RMM"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Info"/>
+                                <connections>
+                                    <action selector="infoImageButtonTapped:" destination="L6M-2G-wW2" eventType="touchUpInside" id="hfk-uc-xJT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="NBS-E5-aTp">
+                                <rect key="frame" x="362" y="286" width="120" height="38.333333333333314"/>
+                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Mulai">
+                                    <color key="titleColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="regular"/>
+                                </state>
+                                <connections>
+                                    <action selector="mulaiButtonTapped:" destination="L6M-2G-wW2" eventType="touchUpInside" id="Sld-5N-0hU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OXu-tN-XAg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B0t-2x-kXo" firstAttribute="top" secondItem="EN0-4u-hp3" secondAttribute="top" id="5H2-Ih-luL"/>
+                            <constraint firstItem="uj4-Zu-NT4" firstAttribute="centerY" secondItem="EN0-4u-hp3" secondAttribute="centerY" id="CXT-Wx-51W"/>
+                            <constraint firstAttribute="bottom" secondItem="2OG-sG-QPz" secondAttribute="bottom" id="J49-Id-kTf"/>
+                            <constraint firstItem="2OG-sG-QPz" firstAttribute="top" secondItem="EN0-4u-hp3" secondAttribute="top" id="Poz-MD-3JH"/>
+                            <constraint firstAttribute="trailing" secondItem="2OG-sG-QPz" secondAttribute="trailing" id="Vki-1H-3wB"/>
+                            <constraint firstItem="NBS-E5-aTp" firstAttribute="leading" secondItem="OXu-tN-XAg" secondAttribute="leading" constant="318" id="Y2x-GJ-riS"/>
+                            <constraint firstAttribute="trailing" secondItem="VWL-7J-BQN" secondAttribute="trailing" constant="27" id="Zx7-BV-CaU"/>
+                            <constraint firstItem="2OG-sG-QPz" firstAttribute="leading" secondItem="EN0-4u-hp3" secondAttribute="leading" id="b2N-nU-BTM"/>
+                            <constraint firstItem="NBS-E5-aTp" firstAttribute="centerX" secondItem="uj4-Zu-NT4" secondAttribute="centerX" id="c54-qS-lZC"/>
+                            <constraint firstItem="VWL-7J-BQN" firstAttribute="top" secondItem="EN0-4u-hp3" secondAttribute="top" id="mP8-1s-vG3"/>
+                            <constraint firstItem="NBS-E5-aTp" firstAttribute="top" secondItem="OXu-tN-XAg" secondAttribute="top" constant="286" id="ndX-67-Ji0"/>
+                            <constraint firstItem="uj4-Zu-NT4" firstAttribute="leading" secondItem="EN0-4u-hp3" secondAttribute="leading" constant="206" id="nqK-Gp-XQg"/>
+                            <constraint firstItem="uj4-Zu-NT4" firstAttribute="centerX" secondItem="EN0-4u-hp3" secondAttribute="centerX" id="sOo-5c-Qfb"/>
+                            <constraint firstItem="uj4-Zu-NT4" firstAttribute="top" secondItem="EN0-4u-hp3" secondAttribute="top" constant="82" id="z3a-PR-bqE"/>
+                            <constraint firstItem="OXu-tN-XAg" firstAttribute="bottom" secondItem="NBS-E5-aTp" secondAttribute="bottom" constant="44.666666666666686" id="zaM-sT-4xu"/>
+                            <constraint firstItem="B0t-2x-kXo" firstAttribute="leading" secondItem="EN0-4u-hp3" secondAttribute="leading" constant="27" id="zo2-E0-ocn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoButton" destination="VWL-7J-BQN" id="u8c-Ux-rIF"/>
+                        <outlet property="mulaiButton" destination="NBS-E5-aTp" id="DLr-XN-Xg1"/>
+                        <outlet property="quitButton" destination="B0t-2x-kXo" id="FGV-7d-0cK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1U6-o5-pxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703.08056872037912" y="60"/>
+        </scene>
+        <!--Tentang Lynn View Controller-->
+        <scene sceneID="byy-vv-DXx">
+            <objects>
+                <viewController storyboardIdentifier="Tentang Lynn" id="57O-3n-pWN" customClass="TentangLynnViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RvB-01-fMB">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="2Ur-y4-4fC">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eV-5r-01x">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="57O-3n-pWN" eventType="touchUpInside" id="Q47-9l-aiX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ax-EL-5qD">
+                                <rect key="frame" x="366" y="300" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kanan"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="57O-3n-pWN" eventType="touchUpInside" id="wkb-jN-uUs"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-8m-0a9">
+                                <rect key="frame" x="466" y="55" width="265" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tentang Lynn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEC-at-bCa">
+                                <rect key="frame" x="134" y="39" width="226" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4np-i3-IOc">
+                                <rect key="frame" x="96" y="97" width="317" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Aplikasi Lynn adalah aplikasi untuk membantu orang tua mengajak anak-anak mereka untuk minum lebih banyak air melalui bermain game dan story telling yang menarik. Karakter Lynn terinpirasi dari tetesan air dengan design yang lucu sehingga anak-anak tertarik untuk melihatnya. </string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Shq-f8-imN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ur-y4-4fC" firstAttribute="top" secondItem="RvB-01-fMB" secondAttribute="top" id="F0k-yF-hdc"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ur-y4-4fC" secondAttribute="trailing" id="Pvh-LY-Hcj"/>
+                            <constraint firstItem="2Ur-y4-4fC" firstAttribute="leading" secondItem="RvB-01-fMB" secondAttribute="leading" id="mgc-Xf-CVE"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ur-y4-4fC" secondAttribute="bottom" id="qIr-kL-qVW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heroLynnImageView" destination="Afc-8m-0a9" id="NXl-Ki-QC4"/>
+                        <outlet property="homeButton" destination="1eV-5r-01x" id="9zG-FA-g6w"/>
+                        <outlet property="nextButton" destination="9Ax-EL-5qD" id="5T5-aI-DaL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1w-GD-sPO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736" y="-885"/>
+        </scene>
+        <!--Tips View Controller-->
+        <scene sceneID="m0v-oq-u3n">
+            <objects>
+                <viewController storyboardIdentifier="Tips" id="WOC-GX-CRn" customClass="TipsViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YmR-D2-SI0">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="I7O-LR-yDg">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips untuk Orang Tua" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kq-r4-y7x">
+                                <rect key="frame" x="134" y="40" width="280" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z34-ZY-Bow">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="WOC-GX-CRn" eventType="touchUpInside" id="Rlc-rB-ede"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNW-B6-yPr">
+                                <rect key="frame" x="333" y="295" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kiri"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="WOC-GX-CRn" eventType="touchUpInside" id="gNJ-vm-kzW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnL-Oq-iEr">
+                                <rect key="frame" x="434" y="295" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kanan"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="WOC-GX-CRn" eventType="touchUpInside" id="1Lq-jS-eCD"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Drink Parent" translatesAutoresizingMaskIntoConstraints="NO" id="AYe-5p-xly">
+                                <rect key="frame" x="521" y="51" width="233" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQa-l2-rau">
+                                <rect key="frame" x="89" y="107" width="413" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Membiasakan anak minum air putih sangat penting. Orang tua harus menjadi role model untuk minum air putih yang dilakukan sedikit demi sedikit dengan jumlah ± 5 gelas perhari. Gunakan gelas yang menarik atau campur air putih dengan potongan buah kesukaannya. Jadikan pertandingan minum air putih dan berikan si Kecil penghargaan dengan rentang waktu tertentu. Selalu jelaskan dan yakinkan tentang hal baik yang akan didapatnya dengan terbiasa minum air putih.</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="14"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6cX-0d-YCA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I7O-LR-yDg" firstAttribute="leading" secondItem="YmR-D2-SI0" secondAttribute="leading" id="3fp-ae-jS4"/>
+                            <constraint firstItem="I7O-LR-yDg" firstAttribute="top" secondItem="YmR-D2-SI0" secondAttribute="top" id="CXt-OL-Y7z"/>
+                            <constraint firstAttribute="trailing" secondItem="I7O-LR-yDg" secondAttribute="trailing" id="G3Y-dQ-287"/>
+                            <constraint firstAttribute="bottom" secondItem="I7O-LR-yDg" secondAttribute="bottom" id="bar-74-wOv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="pNW-B6-yPr" id="Tks-ao-ncv"/>
+                        <outlet property="homeButton" destination="Z34-ZY-Bow" id="DPh-zA-B2X"/>
+                        <outlet property="imageView" destination="AYe-5p-xly" id="bf1-87-QKh"/>
+                        <outlet property="nextButton" destination="bnL-Oq-iEr" id="7uY-bP-vCn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXe-gQ-sT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53.317535545023695" y="-889.23076923076917"/>
+        </scene>
+        <!--Berapa View Controller-->
+        <scene sceneID="nnP-ea-1b1">
+            <objects>
+                <viewController storyboardIdentifier="Berapa" id="MiL-we-x1e" customClass="BerapaViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7EP-IC-4ko">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="WCa-7T-7ib">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZl-Io-iIA">
+                                <rect key="frame" x="113" y="97" width="300" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Ikatan Dokter Anak Indonesia (IDAI) memberi rekomendasi khusus terhadap asupan cairan anak. Disebutkan bahwa anak 4-8 tahun dengan kebutuhan 1.700 ml atau 6 gelas per hari. Faktor jenis kelamin akan berpengaruh ketika anak bertambah dewasa.</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="14"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ketahui jumlah yang tepat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLr-Za-Ehe">
+                                <rect key="frame" x="134" y="48" width="342" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQg-Vf-8Xq">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeBUttonTapped:" destination="MiL-we-x1e" eventType="touchUpInside" id="bcA-Lt-nxI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKM-mD-1r1">
+                                <rect key="frame" x="310" y="305" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kiri"/>
+                                <connections>
+                                    <action selector="backButtontapped:" destination="MiL-we-x1e" eventType="touchUpInside" id="iwE-Xp-Fce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rE-m5-3jM">
+                                <rect key="frame" x="411" y="305" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kanan"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="MiL-we-x1e" eventType="touchUpInside" id="Yil-Zj-kZ5"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minum anak" translatesAutoresizingMaskIntoConstraints="NO" id="d0l-1b-X44">
+                                <rect key="frame" x="498" y="61" width="233" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L4x-go-1ZY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WCa-7T-7ib" firstAttribute="leading" secondItem="7EP-IC-4ko" secondAttribute="leading" id="31K-kT-FRY"/>
+                            <constraint firstAttribute="bottom" secondItem="WCa-7T-7ib" secondAttribute="bottom" id="Gg4-my-Vd1"/>
+                            <constraint firstItem="WCa-7T-7ib" firstAttribute="top" secondItem="7EP-IC-4ko" secondAttribute="top" id="fIR-bA-CKv"/>
+                            <constraint firstAttribute="trailing" secondItem="WCa-7T-7ib" secondAttribute="trailing" id="ffZ-Ym-Bc1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="IKM-mD-1r1" id="CHE-w0-8zb"/>
+                        <outlet property="homeButton" destination="NQg-Vf-8Xq" id="kNy-Gp-pmv"/>
+                        <outlet property="imageView" destination="d0l-1b-X44" id="9aJ-Po-Bvc"/>
+                        <outlet property="nextButton" destination="8rE-m5-3jM" id="g0u-eV-xSc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZu-d7-n2q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659.71563981042652" y="-909.23076923076917"/>
+        </scene>
+        <!--Monitor View Controller-->
+        <scene sceneID="Jcf-Yg-TuK">
+            <objects>
+                <viewController storyboardIdentifier="Monitor" id="uFT-Qp-Rei" customClass="MonitorViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jq3-ZZ-mjU">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="A5i-1z-Xgp">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnN-Id-oyY">
+                                <rect key="frame" x="103" y="95" width="627" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Salah satu cara untuk mengetahui tingkat hidrasi pada anak adalah dengan melihat warna dari urin. Warna urin yang cerah menandakan bahwa anak sudah minum air yang cukup dan terhidrasi dengan baik. Warna urin yang pekat dan gelap menandakan anak kurang terhidrasi dan perlu minum air lebih banyak lagi.</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitor Hidrasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ksb-aO-NJa">
+                                <rect key="frame" x="147" y="48" width="226" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="deg-d9-7YR">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="uFT-Qp-Rei" eventType="touchUpInside" id="cZv-G4-oD1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wFm-tY-SrL">
+                                <rect key="frame" x="366" y="300" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kiri"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="uFT-Qp-Rei" eventType="touchUpInside" id="hD6-O3-PGb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terhidrasi baik" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xse-lV-iZh">
+                                <rect key="frame" x="92" y="247" width="86" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="12"/>
+                                <color key="textColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="urinn" translatesAutoresizingMaskIntoConstraints="NO" id="vaH-I3-tQ4">
+                                <rect key="frame" x="156" y="190" width="480" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kurang terhidrasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8y-wg-3kR">
+                                <rect key="frame" x="636" y="252" width="100" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="12"/>
+                                <color key="textColor" red="0.65300780530000002" green="0.2451727688" blue="0.10974098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rew-xA-dZ4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A5i-1z-Xgp" firstAttribute="leading" secondItem="Jq3-ZZ-mjU" secondAttribute="leading" id="FaL-7f-GHj"/>
+                            <constraint firstItem="A5i-1z-Xgp" firstAttribute="top" secondItem="Jq3-ZZ-mjU" secondAttribute="top" id="MuD-2i-jwQ"/>
+                            <constraint firstAttribute="trailing" secondItem="A5i-1z-Xgp" secondAttribute="trailing" id="iN7-q3-4lJ"/>
+                            <constraint firstAttribute="bottom" secondItem="A5i-1z-Xgp" secondAttribute="bottom" id="ohn-iJ-aGB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="wFm-tY-SrL" id="3oS-y6-qpe"/>
+                        <outlet property="homeButton" destination="deg-d9-7YR" id="211-L3-VZ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTW-ne-XpO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306.6350710900474" y="-909.23076923076917"/>
+        </scene>
+        <!--Home Screen View Controller-->
+        <scene sceneID="0lr-3x-Xuf">
+            <objects>
+                <viewController storyboardIdentifier="Home Screen" id="J0P-Wp-0qT" customClass="HomeScreenViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIp-Ae-bAs">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home screen 2" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-if-rUH">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0G2-ZQ-KTk">
+                                <rect key="frame" x="27" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="J0P-Wp-0qT" eventType="touchUpInside" id="7Q7-7I-JPY"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-aE-M3M">
+                                <rect key="frame" x="89" y="43" width="224" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="7bD-sM-vV6"/>
+                                    <constraint firstAttribute="height" constant="224" id="RKD-QC-Ei4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6n-QG-zvM">
+                                <rect key="frame" x="467" y="277.33333333333331" width="121" height="38.333333333333329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Simpan">
+                                    <color key="titleColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="simpanButtonTapped:" destination="J0P-Wp-0qT" eventType="touchUpInside" id="bhi-vd-43V"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="eNQ-k5-Ueg">
+                                <rect key="frame" x="328" y="76.666666666666657" width="387" height="91.666666666666657"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA3-Pb-eMI">
+                                <rect key="frame" x="394" y="88" width="268" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Hai, namaku Lynn.
+Siapa namamu?</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
+                                <color key="textColor" red="0.9489546418" green="0.92926537990000002" blue="0.93725687270000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JyL-vp-KJy">
+                                <rect key="frame" x="340" y="187" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J0X-xn-n1y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cyc-if-rUH" firstAttribute="top" secondItem="ZIp-Ae-bAs" secondAttribute="top" id="46T-P3-dC1"/>
+                            <constraint firstItem="cyc-if-rUH" firstAttribute="leading" secondItem="ZIp-Ae-bAs" secondAttribute="leading" id="5bH-fC-3M1"/>
+                            <constraint firstItem="fFe-aE-M3M" firstAttribute="top" secondItem="ZIp-Ae-bAs" secondAttribute="topMargin" constant="43" id="JRL-fl-mfX"/>
+                            <constraint firstItem="fFe-aE-M3M" firstAttribute="leading" secondItem="ZIp-Ae-bAs" secondAttribute="leadingMargin" constant="29" id="MGc-hF-gRt"/>
+                            <constraint firstAttribute="bottom" secondItem="cyc-if-rUH" secondAttribute="bottom" id="jdP-PC-Au6"/>
+                            <constraint firstAttribute="trailing" secondItem="cyc-if-rUH" secondAttribute="trailing" id="thr-7u-66e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homeButton" destination="0G2-ZQ-KTk" id="bhl-Tr-eEc"/>
+                        <outlet property="namaTextField" destination="JyL-vp-KJy" id="f3P-Ct-8u9"/>
+                        <outlet property="profilImageView" destination="fFe-aE-M3M" id="DNW-Dd-QRr"/>
+                        <outlet property="simpanButton" destination="D6n-QG-zvM" id="sap-E5-4NM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGU-Gi-to9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="60"/>
+        </scene>
+        <!--Home Screen2 View Controller-->
+        <scene sceneID="lVW-Rq-ay2">
+            <objects>
+                <viewController storyboardIdentifier="Home Screen 2" id="B1i-kE-Fqq" customClass="HomeScreen2ViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q1s-JQ-EhY">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home screen 2" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-PG-fVl">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EB-en-jaw">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Sefron Kiri"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="B1i-kE-Fqq" eventType="touchUpInside" id="RoS-b9-0uN"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="VzA-Ld-nfE">
+                                <rect key="frame" x="325" y="96.666666666666657" width="334" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hai, William. Senang bertemu denganmu." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMa-vo-srb">
+                                <rect key="frame" x="383" y="100.33333333333333" width="231.33333333333331" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
+                                <color key="textColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3w-cN-I4d">
+                                <rect key="frame" x="432" y="220.33333333333331" width="121" height="38.333333333333329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Lanjut">
+                                    <color key="titleColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="lanjutButtonTapped:" destination="B1i-kE-Fqq" eventType="touchUpInside" id="Ccv-dH-WUs"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5F7-lG-68g">
+                                <rect key="frame" x="120" y="69" width="224" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cPj-kD-fwO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m0e-PG-fVl" firstAttribute="leading" secondItem="Q1s-JQ-EhY" secondAttribute="leading" id="GPm-KR-pwm"/>
+                            <constraint firstItem="m0e-PG-fVl" firstAttribute="top" secondItem="Q1s-JQ-EhY" secondAttribute="top" id="NB0-90-HGq"/>
+                            <constraint firstAttribute="bottom" secondItem="m0e-PG-fVl" secondAttribute="bottom" id="Xuz-ii-brF"/>
+                            <constraint firstAttribute="trailing" secondItem="m0e-PG-fVl" secondAttribute="trailing" id="umx-PJ-oPd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="6EB-en-jaw" id="bTa-Kh-BBu"/>
+                        <outlet property="greetingTextField" destination="sMa-vo-srb" id="vsB-DC-6Ka"/>
+                        <outlet property="lanjutButton" destination="R3w-cN-I4d" id="ZoW-N1-Z8D"/>
+                        <outlet property="profilImageView" destination="5F7-lG-68g" id="qP2-j3-al4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zO-1p-OGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="71"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RiC-DA-rRF">
+            <objects>
+                <viewController storyboardIdentifier="Story Telling" id="rX0-hR-Lx3" customClass="ViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ljr-VO-OYH">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wYb-eB-MMA">
+                                <rect key="frame" x="0.0" y="35" width="773" height="299"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9qr-Sy-dLT">
+                                    <size key="itemSize" width="782" height="338.66666666666669"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="vYK-hW-RYM" customClass="DataCollectionViewCell" customModule="Lynn_New" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-20" width="782" height="338.66666666666669"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="t6N-NO-RY0">
+                                            <rect key="frame" x="0.0" y="0.0" width="782" height="338.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9D-wP-vsc">
+                                                    <rect key="frame" x="58" y="8" width="774" height="339"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="782" height="338.66666666666669"/>
+                                        <connections>
+                                            <outlet property="backgroundImage" destination="H9D-wP-vsc" id="DBK-72-rck"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="11" translatesAutoresizingMaskIntoConstraints="NO" id="lGv-DY-ZhA">
+                                <rect key="frame" x="316.33333333333331" y="342" width="211.66666666666669" height="27"/>
+                                <color key="pageIndicatorTintColor" red="0.8473932743" green="0.89008617400000001" blue="0.89412003760000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0052541717890000001" green="0.3102771044" blue="0.27450799939999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSL-Cy-cEk">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="rX0-hR-Lx3" eventType="touchUpInside" id="9KH-6m-NpH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="klY-jp-s2X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="klY-jp-s2X" firstAttribute="trailing" secondItem="wYb-eB-MMA" secondAttribute="trailing" constant="27" id="1ij-bd-dT7"/>
+                            <constraint firstItem="wYb-eB-MMA" firstAttribute="top" secondItem="klY-jp-s2X" secondAttribute="top" constant="35" id="Ebh-Dn-Y2n"/>
+                            <constraint firstItem="lGv-DY-ZhA" firstAttribute="centerX" secondItem="ljr-VO-OYH" secondAttribute="centerX" constant="0.16666666666662877" id="GYY-Ct-SHL"/>
+                            <constraint firstItem="lGv-DY-ZhA" firstAttribute="top" secondItem="wYb-eB-MMA" secondAttribute="bottom" constant="8" symbolic="YES" id="S2c-HQ-Z57"/>
+                            <constraint firstItem="wYb-eB-MMA" firstAttribute="leading" secondItem="ljr-VO-OYH" secondAttribute="leading" id="gEB-Uf-3DQ"/>
+                            <constraint firstItem="lGv-DY-ZhA" firstAttribute="bottom" secondItem="klY-jp-s2X" secondAttribute="bottom" id="tED-bY-LVV"/>
+                            <constraint firstItem="lGv-DY-ZhA" firstAttribute="top" secondItem="wYb-eB-MMA" secondAttribute="bottom" constant="8" symbolic="YES" id="vbj-yp-Ig9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="wYb-eB-MMA" id="cgf-Po-Lny"/>
+                        <outlet property="homeButton" destination="iSL-Cy-cEk" id="Ttp-OT-Xnt"/>
+                        <outlet property="pageController" destination="lGv-DY-ZhA" id="vwh-ds-On1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dv5-4y-Hd2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736.49289099526061" y="1141.5384615384614"/>
+        </scene>
+        <!--Ayo Minum View Controller-->
+        <scene sceneID="h9w-f0-HNg">
+            <objects>
+                <viewController storyboardIdentifier="Ayo Minum" id="bF1-4b-Y1Z" customClass="AyoMinumViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q3V-N5-tb4">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Starting page" translatesAutoresizingMaskIntoConstraints="NO" id="4Id-j8-wTN">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wwM-wE-4QC">
+                                <rect key="frame" x="10" y="288" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kiri"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="bF1-4b-Y1Z" eventType="touchUpInside" id="bHv-Nj-P01"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ayo minum air putih dan lihat apa yang dilakukan Lynn di dalam tubuhmu" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-eI-Tw1">
+                                <rect key="frame" x="248.66666666666663" y="133.33333333333326" width="316" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="g9M-sK-uTq">
+                                <rect key="frame" x="352" y="229.33333333333331" width="121" height="38.333333333333329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.37173831460000001" green="0.1076812223" blue="0.20784816149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Lihat">
+                                    <color key="titleColor" red="0.93682306999999998" green="0.87465500829999998" blue="0.8666656613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="lihatButtonTapped:" destination="bF1-4b-Y1Z" eventType="touchUpInside" id="dh7-id-sUg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A9x-xd-CVa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4Id-j8-wTN" secondAttribute="bottom" id="C7f-vv-oHQ"/>
+                            <constraint firstAttribute="trailing" secondItem="4Id-j8-wTN" secondAttribute="trailing" id="J4m-iA-Q9U"/>
+                            <constraint firstItem="4Id-j8-wTN" firstAttribute="leading" secondItem="q3V-N5-tb4" secondAttribute="leading" id="iwl-Pp-qTD"/>
+                            <constraint firstItem="4Id-j8-wTN" firstAttribute="top" secondItem="A9x-xd-CVa" secondAttribute="top" id="zU1-Ve-eXn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="wwM-wE-4QC" id="JCB-Yn-S2q"/>
+                        <outlet property="lihatButton" destination="g9M-sK-uTq" id="Jpr-yj-XJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sg2-Hj-QRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32" y="1159"/>
+        </scene>
+        <!--Detect Drink-->
+        <scene sceneID="ERh-l0-ng1">
+            <objects>
+                <viewController storyboardIdentifier="Detect Drink" id="f4M-D6-YM0" customClass="DetectDrink" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T1I-jc-ldR">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCB-Wj-u7x">
+                                <rect key="frame" x="354" y="331" width="136" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                <color key="textColor" red="0.1234147921" green="0.30637925859999998" blue="0.2745078802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="29t-60-fmJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SNo-xo-VFC"/>
+                    <connections>
+                        <outlet property="label" destination="QCB-Wj-u7x" id="hGo-3f-739"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="03U-Kd-TUA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659.71563981042652" y="1156.9230769230769"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background info" width="577.66668701171875" height="281.66665649414062"/>
+        <image name="Bitmap" width="129.33332824707031" height="31"/>
+        <image name="Drink Parent" width="400" height="400"/>
+        <image name="Home" width="400" height="400"/>
+        <image name="Info" width="400" height="400"/>
+        <image name="Lynn Logo" width="666.66668701171875" height="400"/>
+        <image name="Page Help" width="844" height="390"/>
+        <image name="Pause" width="400" height="400"/>
+        <image name="Quit" width="400" height="400"/>
+        <image name="Sefron Kanan" width="400" height="400"/>
+        <image name="Sefron Kiri" width="400" height="400"/>
+        <image name="Starting page" width="577.66668701171875" height="281.66665649414062"/>
+        <image name="background game 2.0 a" width="577.66668701171875" height="281.66665649414062"/>
+        <image name="home screen 2" width="1733" height="845"/>
+        <image name="minum anak" width="400" height="400"/>
+        <image name="urinn" width="1500" height="400"/>
+        <image name="yellow forward 1" width="94.666664123535156" height="86.666664123535156"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
