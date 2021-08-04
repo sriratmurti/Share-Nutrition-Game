@@ -304,7 +304,11 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
         self.lynn.isHidden = false
     })
-
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+        self.popup()
+        popUpScene(size: CGSize(width: 844, height: 390)).brainPop()
+        
+    })
 } else if  touchLocation.x >= (heart.position.x) && touchLocation.x < (heart.position.x) + 95 && touchLocation.y >= (heart.position.y) && touchLocation.y < (heart.position.y) + 95{
         lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y)-(lynn.position.y)) + 60))
            pinkForward()
@@ -369,6 +373,23 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         sKView.showsNodeCount = true
     
 }
+    }
+    func popup() {
+    
+    let scene = popUpScene(size: CGSize(width: size.width, height: size.height))
+    scene.scaleMode = scaleMode
+       // Set the scale mode to scale to fit the window
+     let sKView = self.view as! SKView
+        // Load the SKScene from 'GameScene.sks'
+        
+            
+            // Present the scene
+
+        sKView.presentScene(scene)
+        sKView.ignoresSiblingOrder = true
+        sKView.showsFPS = true
+        sKView.showsNodeCount = true
+    
     }
 
 func pinkLeft(){
