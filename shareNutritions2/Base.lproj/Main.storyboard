@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1NG-XC-vEB">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -212,8 +213,77 @@
             </objects>
             <point key="canvasLocation" x="731.51658767772506" y="801.53846153846155"/>
         </scene>
+        <!--Tentang Lynn View Controller-->
+        <scene sceneID="Yeu-0d-bmG">
+            <objects>
+                <viewController storyboardIdentifier="Tentang Lynn" id="1NG-XC-vEB" customClass="TentangLynnViewController" customModule="Lynn_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qe7-x6-IUF">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background info" translatesAutoresizingMaskIntoConstraints="NO" id="MeW-Zl-KLq">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5o-az-fkW">
+                                <rect key="frame" x="33" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="1NG-XC-vEB" eventType="touchUpInside" id="t0E-4E-9zQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSC-HF-hdr">
+                                <rect key="frame" x="366" y="300" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Sefron Kanan"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="1NG-XC-vEB" eventType="touchUpInside" id="VmC-hw-9di"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lynn Page 1" translatesAutoresizingMaskIntoConstraints="NO" id="2e2-ua-6os">
+                                <rect key="frame" x="466" y="55" width="265" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tentang Lynn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xk2-Sm-ePy">
+                                <rect key="frame" x="134" y="39" width="226" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8a-WT-Gb1">
+                                <rect key="frame" x="96" y="97" width="317" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Aplikasi Lynn adalah aplikasi untuk membantu orang tua mengajak anak-anak mereka untuk minum lebih banyak air melalui bermain game dan story telling yang menarik. Karakter Lynn terinpirasi dari tetesan air dengan design yang lucu sehingga anak-anak tertarik untuk melihatnya. </string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" red="0.0049605560489999999" green="0.30641320350000001" blue="0.26666426659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xKr-2P-p8F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MeW-Zl-KLq" firstAttribute="leading" secondItem="qe7-x6-IUF" secondAttribute="leading" id="I31-g0-C0r"/>
+                            <constraint firstItem="MeW-Zl-KLq" firstAttribute="top" secondItem="qe7-x6-IUF" secondAttribute="top" id="dpe-AF-FFY"/>
+                            <constraint firstAttribute="trailing" secondItem="MeW-Zl-KLq" secondAttribute="trailing" id="pd7-LB-pNb"/>
+                            <constraint firstAttribute="bottom" secondItem="MeW-Zl-KLq" secondAttribute="bottom" id="q9q-tb-XNV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heroLynnImageView" destination="2e2-ua-6os" id="aAH-B7-sTE"/>
+                        <outlet property="homeButton" destination="Q5o-az-fkW" id="nhp-mO-qCu"/>
+                        <outlet property="nextButton" destination="SSC-HF-hdr" id="d4U-SI-ARo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VbW-6h-BHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736" y="-885"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Background info" width="577.66668701171875" height="281.66665649414062"/>
+        <image name="Home" width="400" height="400"/>
+        <image name="Lynn Page 1" width="400" height="400"/>
         <image name="Page Help" width="844" height="390"/>
         <image name="Pause" width="400" height="400"/>
         <image name="Quit" width="400" height="400"/>
