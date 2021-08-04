@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0uD-15-MVi">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -7,6 +7,93 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Starting PageVC-->
+        <scene sceneID="zrT-c9-0If">
+            <objects>
+                <viewController storyboardIdentifier="Starting Page" id="0uD-15-MVi" customClass="StartingPageVC" customModule="shareNutritions2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rjq-Bg-zQh"/>
+                        <viewControllerLayoutGuide type="bottom" id="0a4-Lh-krs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N8l-WV-jnG">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Starting page" translatesAutoresizingMaskIntoConstraints="NO" id="jOJ-Lg-UE6">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-oZ-jOr">
+                                <rect key="frame" x="737" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7vr-Cc-xcQ"/>
+                                    <constraint firstAttribute="width" constant="80" id="rK9-vU-9mV"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Info"/>
+                                <connections>
+                                    <action selector="infoImageButtonTapped:" destination="0uD-15-MVi" eventType="touchUpInside" id="w2G-On-Ryz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikj-cc-q83">
+                                <rect key="frame" x="22" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5y2-bT-EgB"/>
+                                    <constraint firstAttribute="width" constant="80" id="hTw-dc-7Pn"/>
+                                </constraints>
+                                <state key="normal" image="Quit"/>
+                                <connections>
+                                    <action selector="quitImageButtonTapped:" destination="0uD-15-MVi" eventType="touchUpInside" id="qlR-WP-rZS"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Lynn Logo" translatesAutoresizingMaskIntoConstraints="NO" id="QCv-en-c2b">
+                                <rect key="frame" x="188.66666666666666" y="76.666666666666657" width="433.66666666666663" height="227.66666666666666"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="PBs-wM-uwy">
+                                <rect key="frame" x="330.33333333333331" y="270" width="151.66666666666666" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Mulai" image="Button">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="regular"/>
+                                </state>
+                                <connections>
+                                    <action selector="startImageButtonTapped:" destination="0uD-15-MVi" eventType="touchUpInside" id="DGU-mZ-Ve7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mulai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qn-wq-tfF">
+                                <rect key="frame" x="383" y="289" width="45.333333333333314" height="25"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jOJ-Lg-UE6" secondAttribute="bottom" id="2xX-ch-t7y"/>
+                            <constraint firstItem="QCv-en-c2b" firstAttribute="top" secondItem="Rjq-Bg-zQh" secondAttribute="bottom" constant="76" id="9Fq-bu-DMz"/>
+                            <constraint firstItem="jOJ-Lg-UE6" firstAttribute="top" secondItem="N8l-WV-jnG" secondAttribute="top" id="Bq7-oa-0y6"/>
+                            <constraint firstAttribute="trailing" secondItem="jOJ-Lg-UE6" secondAttribute="trailing" id="CrU-XD-zTT"/>
+                            <constraint firstItem="QCv-en-c2b" firstAttribute="leading" secondItem="N8l-WV-jnG" secondAttribute="leadingMargin" constant="188" id="JgR-CR-oh4"/>
+                            <constraint firstItem="hE0-oZ-jOr" firstAttribute="top" secondItem="N8l-WV-jnG" secondAttribute="top" id="NYg-6g-izI"/>
+                            <constraint firstItem="PBs-wM-uwy" firstAttribute="top" secondItem="6qn-wq-tfF" secondAttribute="bottom" constant="-44" id="SRY-Xt-kUr"/>
+                            <constraint firstItem="jOJ-Lg-UE6" firstAttribute="leading" secondItem="N8l-WV-jnG" secondAttribute="leading" id="cKx-Mx-SDs"/>
+                            <constraint firstItem="Ikj-cc-q83" firstAttribute="leading" secondItem="N8l-WV-jnG" secondAttribute="leading" constant="22" id="de5-NV-3cm"/>
+                            <constraint firstAttribute="trailing" secondItem="hE0-oZ-jOr" secondAttribute="trailing" constant="27" id="h6K-bc-VLU"/>
+                            <constraint firstItem="Ikj-cc-q83" firstAttribute="top" secondItem="N8l-WV-jnG" secondAttribute="top" id="iTt-zT-ilQ"/>
+                            <constraint firstItem="QCv-en-c2b" firstAttribute="centerY" secondItem="N8l-WV-jnG" secondAttribute="centerY" id="pU8-Lx-VbO"/>
+                            <constraint firstItem="QCv-en-c2b" firstAttribute="centerX" secondItem="N8l-WV-jnG" secondAttribute="centerX" id="wcD-iZ-DOn"/>
+                            <constraint firstItem="PBs-wM-uwy" firstAttribute="leading" secondItem="6qn-wq-tfF" secondAttribute="trailing" constant="-98" id="xim-KV-Qib"/>
+                            <constraint firstItem="QCv-en-c2b" firstAttribute="centerX" secondItem="PBs-wM-uwy" secondAttribute="centerX" id="yG4-iq-wF0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoButton" destination="hE0-oZ-jOr" id="ZU3-GN-h8j"/>
+                        <outlet property="quitButton" destination="Ikj-cc-q83" id="35q-rh-sCE"/>
+                        <outlet property="startButton" destination="PBs-wM-uwy" id="IVJ-2m-STx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="blT-oI-kk4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1179.3838862559242" y="-575.38461538461536"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -47,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76.777251184834114" y="67.692307692307693"/>
+            <point key="canvasLocation" x="198" y="1998"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AWW-fB-tgF">
@@ -96,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBp-DS-4Nz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741.46919431279616" y="67.692307692307693"/>
+            <point key="canvasLocation" x="862" y="1998"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2lG-ZD-s9N">
@@ -145,14 +232,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n99-q9-ew3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="731.51658767772506" y="801.53846153846155"/>
+            <point key="canvasLocation" x="852" y="2732"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Button" width="426.66665649414062" height="197"/>
+        <image name="Info" width="400" height="400"/>
+        <image name="Lynn Logo" width="666.66668701171875" height="400"/>
         <image name="Page Help" width="844" height="390"/>
         <image name="Pause" width="400" height="400"/>
         <image name="Quit" width="400" height="400"/>
         <image name="Sefron Kanan" width="400" height="400"/>
+        <image name="Starting page" width="577.66668701171875" height="281.66665649414062"/>
         <image name="background game 2.0 a" width="577.66668701171875" height="281.66665649414062"/>
         <image name="yellow forward 1" width="94.666664123535156" height="86.666664123535156"/>
         <systemColor name="systemBackgroundColor">
