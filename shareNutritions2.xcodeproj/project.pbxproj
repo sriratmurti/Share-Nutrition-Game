@@ -17,6 +17,7 @@
 		E2532C7226B6DAF400748F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2532C7126B6DAF400748F74 /* Assets.xcassets */; };
 		E29A959826B9415800A6820D /* StartingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29A959726B9415800A6820D /* StartingPage.swift */; };
 		E2EDA30926BA3FD900C3D351 /* PausePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EDA30826BA3FD900C3D351 /* PausePage.swift */; };
+		E2EDA31B26BA80D600C3D351 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EDA31A26BA80D600C3D351 /* PopUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E2532C7326B6DAF400748F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E29A959726B9415800A6820D /* StartingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPage.swift; sourceTree = "<group>"; };
 		E2EDA30826BA3FD900C3D351 /* PausePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePage.swift; sourceTree = "<group>"; };
+		E2EDA31A26BA80D600C3D351 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				E2EDA30726BA3F6600C3D351 /* Controller */,
 				E2532C6626B6DAF400748F74 /* GameScene.sks */,
+				E2EDA31A26BA80D600C3D351 /* PopUp.swift */,
 				E2532C6826B6DAF400748F74 /* Actions.sks */,
 				E2532C6E26B6DAF400748F74 /* Main.storyboard */,
 				E2532C7126B6DAF400748F74 /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 				E2532C6B26B6DAF400748F74 /* GameScene.swift in Sources */,
 				E2EDA30926BA3FD900C3D351 /* PausePage.swift in Sources */,
 				E2532C6D26B6DAF400748F74 /* GameViewController.swift in Sources */,
+				E2EDA31B26BA80D600C3D351 /* PopUp.swift in Sources */,
 				E29A959826B9415800A6820D /* StartingPage.swift in Sources */,
 				E2532C6526B6DAF400748F74 /* AppDelegate.swift in Sources */,
 				E20FBF2926B9A42A00529564 /* function.swift in Sources */,
