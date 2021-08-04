@@ -18,26 +18,7 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LV8-KM-Z3g">
-                                <rect key="frame" x="804" y="0.0" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="tzu-L6-EQ5"/>
-                                    <constraint firstAttribute="height" constant="40" id="xyG-2f-6Qm"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="Pause"/>
-                                <connections>
-                                    <segue destination="6By-aU-Oeb" kind="popoverPresentation" popoverAnchorView="LV8-KM-Z3g" id="kXT-Zc-Uxh">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="LV8-KM-Z3g" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="7n4-A6-1P2"/>
-                            <constraint firstAttribute="trailing" secondItem="LV8-KM-Z3g" secondAttribute="trailing" id="qvj-m1-Rkh"/>
-                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <value key="contentSizeForViewInPopover" type="size" width="844" height="390"/>
@@ -215,7 +196,6 @@
     </scenes>
     <resources>
         <image name="Page Help" width="844" height="390"/>
-        <image name="Pause" width="400" height="400"/>
         <image name="Quit" width="400" height="400"/>
         <image name="Sefron Kanan" width="400" height="400"/>
         <image name="background game 2.0 a" width="577.66668701171875" height="281.66665649414062"/>

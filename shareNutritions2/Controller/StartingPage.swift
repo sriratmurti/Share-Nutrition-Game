@@ -7,6 +7,8 @@ class MainMenuScene: SKScene {
     let background = SKSpriteNode(imageNamed: "starting nutrition")
     let bubble = SKSpriteNode(imageNamed: "Bubble")
     let lynn1 = SKSpriteNode(imageNamed: "Lynn move depan 1")
+    var label = SKLabelNode (fontNamed: "Chalboard SE")
+    
     override func didMove(to view: SKView) {
         background.size = CGSize(width: frame.maxX, height: frame.maxY)
         background.position = CGPoint(x: size.width/2,
@@ -25,6 +27,19 @@ class MainMenuScene: SKScene {
         lynn1.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         lynn1.size = CGSize(width: 250, height: 250)
         addChild(lynn1)
+        
+        label.position = bubble.position
+        label.fontSize = 17
+        label.zPosition = 2
+        label.color = SKColor.white
+        label.horizontalAlignmentMode = .center
+        label.verticalAlignmentMode = .center
+        label.numberOfLines = 7
+        
+        label.text = "Setiap hari, manusia membutuhkan makanan yang bergizi untuk memenuhi nutrisi yang diperlukan oleh organ di dalam tubuh. Agar nutrisi dapat terserap dengan baik, aku bisa membantumu untuk mengantarkannya. Ayo berpetualang bersamaku! Sentuh layar untuk memulai"
+        
+        addChild(label)
+        
     }
     
     #if os(iOS)

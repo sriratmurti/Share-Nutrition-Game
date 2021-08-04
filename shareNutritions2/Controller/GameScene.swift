@@ -107,7 +107,7 @@ class GameScene: SKScene {
     let brain = SKSpriteNode (imageNamed: "Otak sedih 1")
     let lungs = SKSpriteNode (imageNamed: "Paru sedih 1")
     let muscle = SKSpriteNode (imageNamed: "Otot sedih 1")
-    let nutritions = SKSpriteNode (imageNamed: "pink nutrition")
+    let pauseButton = SKSpriteNode (imageNamed: "Pause")
     
 
 
@@ -128,6 +128,10 @@ let playerContact : UInt32 = 0x1 << -2
         isUserInteractionEnabled = true
         
    
+        pauseButton.size = CGSize(width: 50, height: 50)
+        pauseButton.position = CGPoint(x: size.width - 75, y: size.height - 75)
+        pauseButton.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        addChild(pauseButton)
         
         background.subdivisionLevels = .min
         background.size = CGSize(width: frame.size.width, height: frame.size.height)
@@ -222,20 +226,7 @@ let playerContact : UInt32 = 0x1 << -2
         muscleSad()
         addChild(muscle)
     
-    //add nutritions
-        nutritions.zPosition = 1
-        nutritions.size = CGSize (width: 45, height: 45)
-        nutritions.position = CGPoint(x: 0, y: 30)
-       
-        //anchor point utk menunjukkan kordinat si nodenya
-        nutritions.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-        //nutritions.physicsBody = SKPhysicsBody(circleOfRadius: player2.size.width/3)
-        nutritions.physicsBody?.isDynamic = true
-        nutritions.physicsBody?.linearDamping = 1.0
-        //nutritions.physicsBody?.contactTestBitMask = playerContact
-        nutritions.name = "Nutritions"
- 
-        addChild(nutritions)
+   
 }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else{return}
@@ -340,34 +331,44 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.pinkForward()
         
     })
-//    }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (lungs.position.x) && touchLocation.y >= (muscle.position.y) {
-//        lynn.physicsBody?.velocity = (CGVector(dx: (muscle.position.x)-(lynn.position.x), dy:0 ))
-//
+}else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
+    lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((muscle.position.y) - (muscle.position.y)) + 60 ))
+
 //            DispatchQueue.main.async {
 //                AudioServicesPlayAlertSound(SystemSoundID(1324) )
-//
+//                self.pinkForward()
 //            }
-//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
-//        self.takeNutritions()
-//        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.muscle.position.y)-(self.lynn.position.y) ))
-//
-//
-//        })
-//
-//        } else if  touchLocation.x <= 50 && touchLocation.y <= 50 {
-//
-//        lynn.physicsBody?.velocity = (CGVector(dx: (nutritions.position.x)-(lynn.position.x), dy:0 ))
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-//        self.takeNutritions()
-//        self.lynn.physicsBody?.velocity = (CGVector(dx:0, dy:(self.nutritions.position.y)-(self.lynn.position.y) ))
-//
-//        AudioServicesPlayAlertSound(SystemSoundID(1355) )
-//        })
-//
-//
-//
-        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.lynn.physicsBody?.velocity = (CGVector(dx: (self.muscle.position.x) - (self.lynn.position.x), dy: 0 ))
+            self.pinkRight()
+        })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+        self.muscleHappy()
+        self.lynn.isHidden = true
+        self.lynn.position = CGPoint(x: (self.size.width/2) + 10, y: 30)
+    })
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
+        self.pinkForward()
+        self.lynn.isHidden = false
+        
+    })
+}else if touchLocation.x >= pauseButton.position.x && touchLocation.x < (pauseButton.position.x) + 60 && touchLocation.y >= pauseButton.position.y && touchLocation.y < (pauseButton.position.y) + 60{
+   brainHappy()
+    let scene = PausePage(size: CGSize(width: size.width, height: size.height))
+    scene.scaleMode = scaleMode
+       // Set the scale mode to scale to fit the window
+     let sKView = self.view as! SKView
+        // Load the SKScene from 'GameScene.sks'
+        
+            
+            // Present the scene
+
+        sKView.presentScene(scene)
+        sKView.ignoresSiblingOrder = true
+        sKView.showsFPS = true
+        sKView.showsNodeCount = true
+    
+}
     }
 
 func pinkLeft(){
@@ -601,6 +602,8 @@ lynn.run(animateAction)
 //            view?.presentScene(gameOverScene)
 //        }
 //    }
+    
+    
 }
 extension GameScene: SKPhysicsContactDelegate{
     func didBegin(_ contact: SKPhysicsContact) {
