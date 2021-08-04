@@ -11,6 +11,7 @@ let popUp = SKSpriteNode (imageNamed: "pop up game")
 let help = SKSpriteNode (imageNamed: "Tanda tanya")
 let out = SKSpriteNode (imageNamed: "Out")
 let labelOut = SKLabelNode (fontNamed: "Chalkboard SE")
+let labelHelp = SKLabelNode (fontNamed: "Chalkboard SE")
 let close = SKSpriteNode (imageNamed: "Quit")
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,6 +34,12 @@ let close = SKSpriteNode (imageNamed: "Quit")
         labelOut.zPosition = 2
         addChild(labelOut)
         
+        labelHelp.fontSize = 36
+        labelHelp.fontColor = .white
+        labelHelp.position = CGPoint (x: (size.width/2) + 40, y: (size.height/2) + 57)
+        labelHelp.text = "Bantuan"
+        labelHelp.zPosition = 2
+        addChild(labelHelp)
         
         background.size = CGSize(width: size.width, height: size.height)
         background.position = CGPoint(x: size.width/2, y: size.height/2)
@@ -75,10 +82,33 @@ let close = SKSpriteNode (imageNamed: "Quit")
                 sKView.ignoresSiblingOrder = true
                 sKView.showsFPS = true
                 sKView.showsNodeCount = true
-        }
-    }
+        } else if touchLocation.x >= help.position.x && touchLocation.x < (help.position.x) + 60 && touchLocation.y >= help.position.y {
+            let scene = HelpPage1(size: CGSize(width: self.size.width, height: self.size.height))
+            scene.scaleMode = self.scaleMode
+               // Set the scale mode to scale to fit the window
+             let sKView = self.view as! SKView
+                // Load the SKScene from 'GameScene.sks'
+                    // Present the scene
+
+                sKView.presentScene(scene)
+                sKView.ignoresSiblingOrder = true
+                sKView.showsFPS = true
+                sKView.showsNodeCount = true
+            
+    }else if touchLocation.x >= out.position.x && touchLocation.x < (help.position.x) + 60 && touchLocation.y >= out.position.y {
+        let scene = MainMenuScene(size: CGSize(width: self.size.width, height: self.size.height))
+        scene.scaleMode = self.scaleMode
+           // Set the scale mode to scale to fit the window
+         let sKView = self.view as! SKView
+            // Load the SKScene from 'GameScene.sks'
+                // Present the scene
+
+            sKView.presentScene(scene)
+            sKView.ignoresSiblingOrder = true
+            sKView.showsFPS = true
+            sKView.showsNodeCount = true
+}
 }
     
-    
-
+}
 
