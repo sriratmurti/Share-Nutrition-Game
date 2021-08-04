@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "background game 2.0 a.jpg",
+      "filename" : "Button.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "background game 2.0 a@2x.jpg",
+      "filename" : "Button@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "background game 2.0 a@3x.jpg",
+      "filename" : "Button@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
