@@ -35,6 +35,9 @@
 		6D32276526BB6905009944EA /* home page.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D32276226BB6905009944EA /* home page.mp3 */; };
 		6D32276626BB6905009944EA /* stortel10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D32276326BB6905009944EA /* stortel10.mp3 */; };
 		6D32276726BB6905009944EA /* stortel11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D32276426BB6905009944EA /* stortel11.mp3 */; };
+		6D32276C26BB6E86009944EA /* StartingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D32276B26BB6E86009944EA /* StartingPageVC.swift */; };
+		6D32276E26BB6F8D009944EA /* AboutLynnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D32276D26BB6F8D009944EA /* AboutLynnVC.swift */; };
+		6D32277026BB6FC1009944EA /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D32276F26BB6FC1009944EA /* HomeScreenVC.swift */; };
 		E20FBF2926B9A42A00529564 /* function.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20FBF2826B9A42A00529564 /* function.swift */; };
 		E2532C6526B6DAF400748F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2532C6426B6DAF400748F74 /* AppDelegate.swift */; };
 		E2532C6726B6DAF400748F74 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2532C6626B6DAF400748F74 /* GameScene.sks */; };
@@ -78,6 +81,9 @@
 		6D32276226BB6905009944EA /* home page.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "home page.mp3"; sourceTree = "<group>"; };
 		6D32276326BB6905009944EA /* stortel10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel10.mp3; sourceTree = "<group>"; };
 		6D32276426BB6905009944EA /* stortel11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stortel11.mp3; sourceTree = "<group>"; };
+		6D32276B26BB6E86009944EA /* StartingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPageVC.swift; sourceTree = "<group>"; };
+		6D32276D26BB6F8D009944EA /* AboutLynnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutLynnVC.swift; sourceTree = "<group>"; };
+		6D32276F26BB6FC1009944EA /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		E20FBF2826B9A42A00529564 /* function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function.swift; sourceTree = "<group>"; };
 		E2532C6126B6DAF400748F74 /* shareNutritions2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shareNutritions2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2532C6426B6DAF400748F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +153,16 @@
 			path = "Voice Story Telling";
 			sourceTree = "<group>";
 		};
+		6D32276826BB6DE7009944EA /* Stortel Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D32276B26BB6E86009944EA /* StartingPageVC.swift */,
+				6D32276D26BB6F8D009944EA /* AboutLynnVC.swift */,
+				6D32276F26BB6FC1009944EA /* HomeScreenVC.swift */,
+			);
+			path = "Stortel Controller";
+			sourceTree = "<group>";
+		};
 		E2532C5826B6DAF400748F74 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +182,7 @@
 		E2532C6326B6DAF400748F74 /* shareNutritions2 */ = {
 			isa = PBXGroup;
 			children = (
+				6D32276826BB6DE7009944EA /* Stortel Controller */,
 				6D32274926BB676D009944EA /* Voice Story Telling */,
 				6D32272826BB674A009944EA /* Animasi Lynn */,
 				E2EDA30726BA3F6600C3D351 /* Controller */,
@@ -293,7 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2532C6B26B6DAF400748F74 /* GameScene.swift in Sources */,
+				6D32277026BB6FC1009944EA /* HomeScreenVC.swift in Sources */,
+				6D32276C26BB6E86009944EA /* StartingPageVC.swift in Sources */,
 				E2EDA30926BA3FD900C3D351 /* PausePage.swift in Sources */,
+				6D32276E26BB6F8D009944EA /* AboutLynnVC.swift in Sources */,
 				E2532C6D26B6DAF400748F74 /* GameViewController.swift in Sources */,
 				E2EDA31B26BA80D600C3D351 /* PopUp.swift in Sources */,
 				E29A959826B9415800A6820D /* StartingPage.swift in Sources */,

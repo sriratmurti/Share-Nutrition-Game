@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k3o-Ws-Gf1">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -30,8 +30,77 @@
             </objects>
             <point key="canvasLocation" x="76.777251184834114" y="67.692307692307693"/>
         </scene>
+        <!--Starting PageVC-->
+        <scene sceneID="fOA-07-neJ">
+            <objects>
+                <viewController storyboardIdentifier="Starting Page" id="k3o-Ws-Gf1" customClass="StartingPageVC" customModule="shareNutritions2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fRs-Z5-WS0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ePt-bO-L3c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7qm-rg-Dwr">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Starting page" translatesAutoresizingMaskIntoConstraints="NO" id="4kq-wp-8EB">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lynn Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OcN-pb-Ugq">
+                                <rect key="frame" x="188.66666666666666" y="76.666666666666657" width="433.66666666666663" height="227.66666666666666"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKH-gq-UBz">
+                                <rect key="frame" x="22" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Quit"/>
+                                <connections>
+                                    <action selector="quitButtonTapped:" destination="k3o-Ws-Gf1" eventType="touchUpInside" id="3mC-eb-4Z4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBz-kd-Vz5">
+                                <rect key="frame" x="737" y="0.0" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Info"/>
+                                <connections>
+                                    <action selector="infoButtonTapped:" destination="k3o-Ws-Gf1" eventType="touchUpInside" id="J4D-Ue-Ljz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSK-GL-THt">
+                                <rect key="frame" x="330.33333333333331" y="270" width="151.66666666666666" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Button"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="k3o-Ws-Gf1" eventType="touchUpInside" id="jbd-Iy-vqe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mulai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7f-m9-Ydx">
+                                <rect key="frame" x="383" y="289" width="46" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoButton" destination="fBz-kd-Vz5" id="uov-ee-Qs4"/>
+                        <outlet property="quitButton" destination="MKH-gq-UBz" id="PLV-W7-RMc"/>
+                        <outlet property="startButton" destination="iSK-GL-THt" id="KK5-xO-s1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBc-Er-sMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="977"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Button" width="426.66665649414062" height="197"/>
+        <image name="Info" width="400" height="400"/>
+        <image name="Lynn Logo" width="666.66668701171875" height="400"/>
+        <image name="Quit" width="400" height="400"/>
+        <image name="Starting page" width="577.66668701171875" height="281.66665649414062"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
