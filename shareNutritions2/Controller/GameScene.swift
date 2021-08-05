@@ -109,6 +109,11 @@ class GameScene: SKScene {
     let muscle = SKSpriteNode (imageNamed: "Otot sedih 1")
     let pauseButton = SKSpriteNode (imageNamed: "Pause")
     var call1 = String()
+    let requestBrain = SKSpriteNode (imageNamed: "request")
+    let requestKidney = SKSpriteNode (imageNamed: "request")
+    let requestHeart = SKSpriteNode (imageNamed: "request")
+    let requestLungs = SKSpriteNode (imageNamed: "request")
+    let requestMuscle = SKSpriteNode (imageNamed: "request")
 
 
 let playerContact : UInt32 = 0x1 << -2
@@ -226,7 +231,31 @@ let playerContact : UInt32 = 0x1 << -2
         muscleSad()
         addChild(muscle)
     
+        requestBrain.size = CGSize(width: 123, height: 53)
+        requestBrain.zPosition = 1
+        requestBrain.position = CGPoint(x: brain.position.x + 100, y: brain.position.y + 80)
+        addChild(requestBrain)
    
+        requestKidney.size = CGSize(width: 123, height: 53)
+        requestKidney.zPosition = 1
+        requestKidney.position = CGPoint(x: kidney.position.x + 100, y: kidney.position.y + 80)
+        addChild(requestKidney)
+        
+        requestHeart.size = CGSize(width: 123, height: 53)
+        requestHeart.zPosition = 1
+        requestHeart.position = CGPoint(x: heart.position.x + 100, y: heart.position.y + 80)
+        addChild(requestHeart)
+        
+        requestLungs.size = CGSize(width: 123, height: 53)
+        requestLungs.zPosition = 1
+        requestLungs.position = CGPoint(x: lungs.position.x + 100, y: lungs.position.y + 80)
+        addChild(requestLungs)
+        
+        requestMuscle.size = CGSize(width: 123, height: 53)
+        requestMuscle.zPosition = 1
+        requestMuscle.position = CGPoint(x: muscle.position.x + 100, y: muscle.position.y + 80)
+        addChild(requestMuscle)
+        
 }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else{return}
@@ -239,7 +268,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((kidney.position.y) - 20) - (lynn.position.y)))
     pinkForward()
     call1 = "Kidney"
-    
+    requestKidney.isHidden = true
     
     DispatchQueue.main.async {
             AudioServicesPlayAlertSound(SystemSoundID(1151) )
@@ -262,7 +291,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     
            
 }else if touchLocation.x > (lungs.position.x) && touchLocation.x <= (lungs.position.x) + 75 &&  touchLocation.y >= (lungs.position.y) && touchLocation.y < (lungs.position.y) + 75 {
-    
+    requestLungs.isHidden = true
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y) - (lynn.position.y)) + 77))
      pinkForward()
         DispatchQueue.main.async {
@@ -292,6 +321,8 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.lungsUp()
     })
 }else if  touchLocation.x >= (brain.position.x) && touchLocation.x < (brain.position.x) + 95 && touchLocation.y >= (brain.position.y) && touchLocation.y < (brain.position.y) + 95 {
+    
+    requestBrain.isHidden = true
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: (brain.position.y) - (lynn.position.y)))
            pinkForward()
             DispatchQueue.main.async {
@@ -311,6 +342,8 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
     })
     
 } else if  touchLocation.x >= (heart.position.x) && touchLocation.x < (heart.position.x) + 95 && touchLocation.y >= (heart.position.y) && touchLocation.y < (heart.position.y) + 95{
+    requestHeart.isHidden = true
+    
         lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((heart.position.y)-(lynn.position.y)) + 60))
            pinkForward()
         DispatchQueue.main.async {
@@ -337,6 +370,7 @@ if touchLocation.x >= (kidney.position.x) && touchLocation.x < (kidney.position.
         self.heartUp()
     })
 }else if   touchLocation.x >= (muscle.position.x) && touchLocation.x < (muscle.position.x) + 100 && touchLocation.y >= (muscle.position.y) && touchLocation.y < (muscle.position.y) + 100 {
+    requestMuscle.isHidden = true
     lynn.physicsBody?.velocity = (CGVector(dx: 0, dy: ((muscle.position.y) - (muscle.position.y)) + 60 ))
 
 //            DispatchQueue.main.async {
